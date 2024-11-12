@@ -10,7 +10,7 @@
 # uplifted_portraits = {}							List of portraits which will be used by species of corresponding class after uplifting
 #													(the number of uplifted portraits must be the same as the number of portraits in 'portraits' list).
 
-humanoids_virtual = {
+virtual_humanoids = {
 	species_class = HUM
 
 	portraits = {
