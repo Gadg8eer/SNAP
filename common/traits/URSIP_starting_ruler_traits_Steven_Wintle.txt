@@ -6,11 +6,11 @@
 #--------------------#
 # If you understand and accept the above conditions, you may proceed.
 
-leader_trait_ursip_steven_wintle_jenny_everywhere = {
+leader_trait_MAP_steven_wintle_jenny_everywhere = {
 	starting_ruler_trait = yes
 	cost = 0
 	inline_script = {
-		script = "leader_trait_ursip_steven_wintle_jenny_everywhere"
+		script = "leader_trait_MAP_steven_wintle_jenny_everywhere"
 		CLASS = scientist
 		ICON = "GFX_trait_clone_soldier"
 		RARITY = unique
@@ -42,7 +42,7 @@ leader_trait_ursip_steven_wintle_jenny_everywhere = {
 			
 		}
 		show_if_not_potential = yes
-		not_potential_override_text_key = ursip_steven_wintle_jenny_everywhere_on_council
+		not_potential_override_text_key = MAP_steven_wintle_jenny_everywhere_on_council
 		leaders_upkeep_mult = -0.10
 	}
 	councilor_modifier = {
@@ -65,12 +65,12 @@ leader_trait_ursip_steven_wintle_jenny_everywhere = {
 
 ### Trait conflicts
 	opposites = {
-		leader_trait_ursip_mistereightysix_arcoiris
-		leader_trait_ursip_mistereightysix_arcoiris_2
-		leader_trait_ursip_codygibling_gadg8eer
-        leader_trait_ursip_codygibling_quick_gadg8eer
-		leader_trait_ursip_codygibling_social_gadg8eer
-		leader_trait_ursip_codygibling_playing_gadg8eer
+		leader_trait_MAP_mistereightysix_arcoiris
+		leader_trait_MAP_mistereightysix_arcoiris_2
+		leader_trait_MAP_codygibling_gadg8eer
+        leader_trait_MAP_codygibling_quick_gadg8eer
+		leader_trait_MAP_codygibling_social_gadg8eer
+		leader_trait_MAP_codygibling_playing_gadg8eer
 	}
 	selectable_weight = {
 		weight = @class_trait_weight
@@ -79,11 +79,11 @@ leader_trait_ursip_steven_wintle_jenny_everywhere = {
 	ai_weight = 20
 }
 
-leader_trait_ursip_steven_wintle_jenny_everywhere_2 = {
-	replace_traits = { "leader_trait_ursip_steven_wintle_jenny_everywhere" }
+leader_trait_MAP_steven_wintle_jenny_everywhere_2 = {
+	replace_traits = { "leader_trait_MAP_steven_wintle_jenny_everywhere" }
 	cost = 1
 	inline_script = {
-		script = "leader_trait_ursip_steven_wintle_jenny_everywhere_2"
+		script = "leader_trait_MAP_steven_wintle_jenny_everywhere_2"
 		CLASS = scientist
 		ICON = "GFX_trait_ingenious"
 		RARITY = unique
@@ -101,7 +101,7 @@ leader_trait_ursip_steven_wintle_jenny_everywhere_2 = {
 	}
 	
 	self_modifier = {
-        set_name = leader_ursip_steven_wintle_jenny_everywhere
+        set_name = leader_MAP_steven_wintle_jenny_everywhere
 		modification = no
 		hide_age = yes
 		slave_cost = {
@@ -113,7 +113,7 @@ leader_trait_ursip_steven_wintle_jenny_everywhere_2 = {
 	triggered_self_modifier = {
 		potential = { is_councilor = no }
 		show_if_not_potential = yes
-		not_potential_override_text_key = ursip_steven_wintle_jenny_everywhere_on_council
+		not_potential_override_text_key = MAP_steven_wintle_jenny_everywhere_on_council
 		leaders_upkeep_mult = -0.10
 	}
 	councilor_modifier = {
@@ -134,12 +134,12 @@ leader_trait_ursip_steven_wintle_jenny_everywhere_2 = {
 
 ### Trait conflicts
 	opposites = {
-		leader_trait_ursip_mistereightysix_arcoiris
-		leader_trait_ursip_mistereightysix_arcoiris_2
-		leader_trait_ursip_codygibling_gadg8eer
-        leader_trait_ursip_codygibling_quick_gadg8eer
-        leader_trait_ursip_codygibling_social_gadg8eer
-        leader_trait_ursip_codygibling_playing_gadg8eer
+		leader_trait_MAP_mistereightysix_arcoiris
+		leader_trait_MAP_mistereightysix_arcoiris_2
+		leader_trait_MAP_codygibling_gadg8eer
+        leader_trait_MAP_codygibling_quick_gadg8eer
+        leader_trait_MAP_codygibling_social_gadg8eer
+        leader_trait_MAP_codygibling_playing_gadg8eer
 	}
 	selectable_weight = {
 		weight = @class_trait_weight
