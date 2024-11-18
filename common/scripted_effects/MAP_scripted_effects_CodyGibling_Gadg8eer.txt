@@ -14,7 +14,7 @@ MAP_scripted_effect_codygibling_gadg8eer_start_0 = {
 		is_idle = yes				# whether the leader is idle
 	}
 	trigger = {
-		trait_ruler_ursip_codygibling_gadg8eer
+		trait_ruler_MAP_codygibling_gadg8eer
 	}
 	immediate = {
 		owner = {
@@ -95,7 +95,7 @@ MAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
 		limit = {
 			who = {
 				event_target:Gadg8eer = {
-					is_deadbutessential_ursip_codygibling_gadg8eer = yes
+					is_deadbutessential_MAP_codygibling_gadg8eer = yes
 				}
 			}
 		}
@@ -122,7 +122,7 @@ MAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
 		limit = {
 			who = {
 				event_target:Gadg8eer = {
-					is_deadbutessential_ursip_codygibling_gadg8eer = yes
+					is_deadbutessential_MAP_codygibling_gadg8eer = yes
 				}
 			}
 		}
