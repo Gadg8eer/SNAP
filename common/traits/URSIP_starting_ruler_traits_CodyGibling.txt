@@ -8,7 +8,7 @@
 # If you understand and accept the above conditions, you may proceed.
 
 ##### Vanilla Version, AI-usable
-leader_trait_ursip_codygibling_gadg8eer = {
+leader_trait_MAP_codygibling_gadg8eer = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/GFX_trait_mechanical.dds"
@@ -32,11 +32,11 @@ leader_trait_ursip_codygibling_gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 # can't be any of the following characters at the same time
-		"leader_trait_ursip_mistereightysix_arcoiris"
-		"leader_trait_ursip_mistereightysix_arcoiris_2"
-		"leader_trait_ursip_steven_wintle_jenny_everywhere"
-		"leader_trait_ursip_steven_wintle_jenny_everywhere_2"
-		"leader_trait_ursip_codygibling_playing_gadg8eer"
+		"leader_trait_MAP_mistereightysix_arcoiris"
+		"leader_trait_MAP_mistereightysix_arcoiris_2"
+		"leader_trait_MAP_steven_wintle_jenny_everywhere"
+		"leader_trait_MAP_steven_wintle_jenny_everywhere_2"
+		"leader_trait_MAP_codygibling_playing_gadg8eer"
 	}
 ### 
 	modifier = {
@@ -83,7 +83,7 @@ leader_trait_ursip_codygibling_gadg8eer = {
 				set_gender = male
 				set_immortal = yes
 				set_name = leader_codygibling_gadg8eer/ruler
-				change_leader_portrait = URSIP_portrait_CodyGibling_Gadg8eer_entity
+				change_leader_portrait = MAP_portrait_CodyGibling_Gadg8eer_entity
 			}
 		}
 	}
@@ -101,10 +101,10 @@ leader_trait_ursip_codygibling_gadg8eer = {
 				potential = {
 					on_single_player_save_game_load
 					OR = {
-						has_trait = leader_trait_ursip_codygibling_gadg8eer
-#						has_trait = leader_trait_ursip_codygibling_quick_gadg8eer
-#						has_trait = leader_trait_ursip_codygibling_social_gadg8eer
-#						has_trait = leader_trait_ursip_codygibling_playing_gadg8eer
+						has_trait = leader_trait_MAP_codygibling_gadg8eer
+#						has_trait = leader_trait_MAP_codygibling_quick_gadg8eer
+#						has_trait = leader_trait_MAP_codygibling_social_gadg8eer
+#						has_trait = leader_trait_MAP_codygibling_playing_gadg8eer
 					}
 				}
 				set_name = leader_codygibling_gadg8eer/ruler
@@ -121,7 +121,7 @@ leader_trait_ursip_codygibling_gadg8eer = {
 		}
 		#show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
 		show_if_not_potential = yes
-		not_potential_override_text_key = ursip_codygibling_gadg8eer_on_council
+		not_potential_override_text_key = MAP_codygibling_gadg8eer_on_council
 		leaders_upkeep_mult = -0.10 #tooltip displays game's default reduction in leader upkeep from removing councillor
 	}
 ### Leader bonuses
@@ -134,7 +134,7 @@ leader_trait_ursip_codygibling_gadg8eer = {
 }
 
 ##### Vanilla Version, Player-usable
-trait_ruler_ursip_codygibling_gadg8eer = {
+trait_ruler_MAP_codygibling_gadg8eer = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/GFX_trait_mechanical.dds"
@@ -161,11 +161,11 @@ trait_ruler_ursip_codygibling_gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 ### can't be any of the following characters at the same time
-		"leader_trait_ursip_mistereightysix_arcoiris"
-		"leader_trait_ursip_mistereightysix_arcoiris_2"
-		"leader_trait_ursip_steven_wintle_jenny_everywhere"
-		"leader_trait_ursip_steven_wintle_jenny_everywhere_2"
-		"leader_trait_ursip_codygibling_playing_gadg8eer"
+		"leader_trait_MAP_mistereightysix_arcoiris"
+		"leader_trait_MAP_mistereightysix_arcoiris_2"
+		"leader_trait_MAP_steven_wintle_jenny_everywhere"
+		"leader_trait_MAP_steven_wintle_jenny_everywhere_2"
+		"leader_trait_MAP_codygibling_playing_gadg8eer"
 	}
 	
 ### When Gadg8eer is uploaded or a Conceptoid, but he is older than 10, his age will be reverted to 10 and his original gender and his name will be enforced.
@@ -219,10 +219,10 @@ trait_ruler_ursip_codygibling_gadg8eer = {
 				potential = {
 					on_single_player_save_game_load
 					OR = {
-						has_trait = leader_trait_ursip_codygibling_gadg8eer
-#						has_trait = leader_trait_ursip_codygibling_quick_gadg8eer
-#						has_trait = leader_trait_ursip_codygibling_social_gadg8eer
-#						has_trait = leader_trait_ursip_codygibling_playing_gadg8eer
+						has_trait = leader_trait_MAP_codygibling_gadg8eer
+#						has_trait = leader_trait_MAP_codygibling_quick_gadg8eer
+#						has_trait = leader_trait_MAP_codygibling_social_gadg8eer
+#						has_trait = leader_trait_MAP_codygibling_playing_gadg8eer
 					}
 				}
 				set_name = leader_codygibling_gadg8eer/ruler
@@ -238,7 +238,7 @@ trait_ruler_ursip_codygibling_gadg8eer = {
 		}
 		#show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
 		show_if_not_potential = yes
-		not_potential_override_text_key = ursip_codygibling_gadg8eer_on_council
+		not_potential_override_text_key = MAP_codygibling_gadg8eer_on_council
 		leaders_upkeep_mult = -0.10 #tooltip displays game's default reduction in leader upkeep from removing councillor
 	}
 ### Leader bonuses
