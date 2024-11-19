@@ -1,7 +1,9 @@
 example_set = {
-	species_class = EXAMPLE
+	species_class = TOON
 
 	portraits = {
-		"example"
+		"example_red"
+		"example_green"
+		"example_blue"
 	}
 }

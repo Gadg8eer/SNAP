@@ -5,5 +5,5 @@ tags={
 	"Graphics"
 }
 
-name="Metaverse Avatar Portraits"
+name="Stellaris Novelty Avatar Portraits"
 supported_version="3.14.*"
