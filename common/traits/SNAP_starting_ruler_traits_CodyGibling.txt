@@ -8,19 +8,24 @@
 # If you understand and accept the above conditions, you may proceed.
 
 ##### Vanilla Version, AI-usable
-leader_trait_SNAP_codygibling_gadg8eer = {
+leader_trait_SNAP_CodyGibling_Gadg8eer = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/GFX_trait_mechanical.dds"
 	leader_potential_add {
-		gender = male
+		OR = {
+			gender = male
+			has_trait = trait_conceptoid
+		}
 		leader_class = { official commander scientist }
 		leader_trait = { official commander scientist }
 		NOT = {
-			from = {
-				has_ethic = "ethic_gestalt_consciousness"
+			OR = {
+				from = {
+					has_ethic = "ethic_gestalt_consciousness"
+				}
 			}
-			has_global_flag = Global_Gadg8eer
+			has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 		}
 ### Can't have these traits
 		opposites = {
@@ -32,17 +37,15 @@ leader_trait_SNAP_codygibling_gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 # can't be any of the following characters at the same time
-		"leader_trait_SNAP_mistereightysix_arcoiris"
-		"leader_trait_SNAP_mistereightysix_arcoiris_2"
-		"leader_trait_SNAP_steven_wintle_jenny_everywhere"
-		"leader_trait_SNAP_steven_wintle_jenny_everywhere_2"
-		"leader_trait_SNAP_codygibling_playing_gadg8eer"
+		"leader_trait_SNAP_MisterEightySix_arcoiris"
+		"leader_trait_SNAP_MisterEightySix_arcoiris_2"
+		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
+		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 ### 
 	modifier = {
-		set_global_flag = Global_Gadg8eer
-		set_country_flag = Country_Gadg8eer
-		set_leader_flag = Gadg8eer
+		
 	}
 ### When Gadg8eer is uploaded or a Conceptoid, but he is older than 10, his age will be reverted to 10 and his original gender and his name will be enforced.
 ### This is meant to repeat whenever he would become a year older.
@@ -50,22 +53,23 @@ leader_trait_SNAP_codygibling_gadg8eer = {
 		who = {
 			event_target:Gadg8eer = {
 				potential = {
-					AND = {
-						has_global_flag = Global_Gadg8eer
-						has_country_flag = Country_Gadg8eer
-						has_leader_flag = Gadg8eer
+					NOT = {
+						has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 					}
 					OR {
 						AND {
 							OR = {
 								has_trait = leader_trait_virtual
 								has_trait = trait_conceptoid
+								has_trait = trait_mechanical
 							}
 							NOT = {
-								hide_age = no
-								leader age = 10
-								gender = male
-								is_immortal = no
+								OR = {
+								#	hide_age = no
+									leader age = 10
+									gender = male
+									is_immortal = no
+								}
 							}
 						}
 						OR = {
@@ -82,8 +86,11 @@ leader_trait_SNAP_codygibling_gadg8eer = {
 				hide_age = no
 				set_gender = male
 				set_immortal = yes
-				set_name = leader_codygibling_gadg8eer/ruler
-				change_leader_portrait = SNAP_portrait_CodyGibling_Gadg8eer_entity
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+				change_leader_portrait = SNAP_CodyGibling_Gadg8eer
+				set_global_flag = Global_Gadg8eer
+				set_country_flag = Country_Gadg8eer
+				set_leader_flag = Gadg8eer
 			}
 		}
 	}
@@ -100,15 +107,21 @@ leader_trait_SNAP_codygibling_gadg8eer = {
 			event_target:Gadg8eer = {
 				potential = {
 					on_single_player_save_game_load
+					NOT = {
+						has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+					}
 					OR = {
-						has_trait = leader_trait_SNAP_codygibling_gadg8eer
-#						has_trait = leader_trait_SNAP_codygibling_quick_gadg8eer
-#						has_trait = leader_trait_SNAP_codygibling_social_gadg8eer
-#						has_trait = leader_trait_SNAP_codygibling_playing_gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
 				}
-				set_name = leader_codygibling_gadg8eer/ruler
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+				change_leader_portrait = SNAP_CodyGibling_Gadg8eer
 				# EVENT WINDOW TO TELL YOU THAT CAN'T RENAME THIS CHARACTER!
+				set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 			}
 		}
 	}
@@ -121,7 +134,7 @@ leader_trait_SNAP_codygibling_gadg8eer = {
 		}
 		#show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
 		show_if_not_potential = yes
-		not_potential_override_text_key = SNAP_codygibling_gadg8eer_on_council
+		not_potential_override_text_key = SNAP_CodyGibling_Gadg8eer_on_council
 		leaders_upkeep_mult = -0.10 #tooltip displays game's default reduction in leader upkeep from removing councillor
 	}
 ### Leader bonuses
@@ -134,13 +147,12 @@ leader_trait_SNAP_codygibling_gadg8eer = {
 }
 
 ##### Vanilla Version, Player-usable
-trait_ruler_SNAP_codygibling_gadg8eer = {
+trait_ruler_SNAP_CodyGibling_Gadg8eer = {
 	cost = 1
 	modification = no
 	icon = "gfx/interface/icons/traits/GFX_trait_mechanical.dds"
 	leader_potential_add {
-		gender = male
-		leader_class = { ruler }
+#		gender = male
 		NOT = {
 			from = {
 				has_ethic = "ethic_gestalt_consciousness"
@@ -148,10 +160,12 @@ trait_ruler_SNAP_codygibling_gadg8eer = {
 		}
 	}
 	modifier = {
-		#
+		set_global_flag = Global_Gadg8eer
+		set_country_flag = Country_Gadg8eer
+		set_leader_flag = Gadg8eer
 	}
-	leader_trait = { ruler }
-	leader_class = { ruler }
+	leader_trait = { ruler scientist commander }
+	leader_class = { ruler scientist commander }
 	opposites = {
 		"leader_trait_paranoid"
 		"leader_trait_paranoid_2"
@@ -161,11 +175,11 @@ trait_ruler_SNAP_codygibling_gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 ### can't be any of the following characters at the same time
-		"leader_trait_SNAP_mistereightysix_arcoiris"
-		"leader_trait_SNAP_mistereightysix_arcoiris_2"
-		"leader_trait_SNAP_steven_wintle_jenny_everywhere"
-		"leader_trait_SNAP_steven_wintle_jenny_everywhere_2"
-		"leader_trait_SNAP_codygibling_playing_gadg8eer"
+		"leader_trait_SNAP_MisterEightySix_arcoiris"
+		"leader_trait_SNAP_MisterEightySix_arcoiris_2"
+		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
+		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	
 ### When Gadg8eer is uploaded or a Conceptoid, but he is older than 10, his age will be reverted to 10 and his original gender and his name will be enforced.
@@ -179,12 +193,15 @@ trait_ruler_SNAP_codygibling_gadg8eer = {
 							OR = {
 								has_trait = leader_trait_virtual
 								has_trait = trait_conceptoid
+								has_trait = trait_mechanical
 							}
 							NOT = {
-								hide_age = no
-								leader age = 10
-								gender = male
-								is_immortal = no
+								OR = {
+								#	hide_age = no
+									leader age = 10
+									gender = male
+									is_immortal = no
+								}
 							}
 						}
 						OR = {
@@ -201,7 +218,11 @@ trait_ruler_SNAP_codygibling_gadg8eer = {
 				hide_age = no
 				set_gender = male
 				set_immortal = yes
-				set_name = leader_codygibling_gadg8eer/ruler
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+				change_leader_portrait = SNAP_CodyGibling_Gadg8eer
+				set_global_flag = Global_Gadg8eer
+				set_country_flag = Country_Gadg8eer
+				set_leader_flag = Gadg8eer
 			}
 		}
 	}
@@ -219,13 +240,17 @@ trait_ruler_SNAP_codygibling_gadg8eer = {
 				potential = {
 					on_single_player_save_game_load
 					OR = {
-						has_trait = leader_trait_SNAP_codygibling_gadg8eer
-#						has_trait = leader_trait_SNAP_codygibling_quick_gadg8eer
-#						has_trait = leader_trait_SNAP_codygibling_social_gadg8eer
-#						has_trait = leader_trait_SNAP_codygibling_playing_gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
 				}
-				set_name = leader_codygibling_gadg8eer/ruler
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+				change_leader_portrait = SNAP_CodyGibling_Gadg8eer
+				set_global_flag = Global_Gadg8eer
+				set_country_flag = Country_Gadg8eer
+				set_leader_flag = Gadg8eer
 			}
 		}
 	}
@@ -238,7 +263,135 @@ trait_ruler_SNAP_codygibling_gadg8eer = {
 		}
 		#show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
 		show_if_not_potential = yes
-		not_potential_override_text_key = SNAP_codygibling_gadg8eer_on_council
+		not_potential_override_text_key = SNAP_CodyGibling_Gadg8eer_on_council
+		leaders_upkeep_mult = -0.10 #tooltip displays game's default reduction in leader upkeep from removing councillor
+	}
+### Leader bonuses
+	councilor_modifier = {
+		category_physics_research_speed_mult = 0.08
+		category_engineering_research_speed_mult = 0.10
+		# increased chance to discover rare techs (weighted in tech-script)
+		species_leader_exp_gain = 0.10
+	}
+}
+
+##### Vanilla Version, Tier 2
+trait_ruler_SNAP_CodyGibling_quick_Gadg8eer = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/GFX_trait_mechanical.dds"
+	leader_potential_add {
+	#	gender = male
+		leader_class = { ruler }
+		NOT = {
+			from = {
+				has_ethic = "ethic_gestalt_consciousness"
+			}
+		}
+	}
+	modifier = {
+		#
+	}
+	leader_trait = { ruler scientist commander }
+	leader_class = { ruler scientist commander }
+	opposites = {
+		"leader_trait_paranoid"
+		"leader_trait_paranoid_2"
+		"leader_trait_spark_of_genius"
+		"leader_trait_spark_of_genius_2"
+		"leader_trait_maniacal"
+		"leader_trait_maniacal_2"
+		"leader_trait_maniacal_3"
+### can't be any of the following characters at the same time
+		"leader_trait_SNAP_MisterEightySix_arcoiris"
+		"leader_trait_SNAP_MisterEightySix_arcoiris_2"
+		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
+		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+	}
+	
+### When Gadg8eer is uploaded or a Conceptoid, but he is older than 10, his age will be reverted to 10 and his original gender and his name will be enforced.
+### This is meant to repeat whenever he would become a year older.
+	triggered_self_modifier = {
+		who = {
+			event_target:Gadg8eer = {
+				potential = {
+					OR {
+						AND {
+							OR = {
+								has_trait = leader_trait_virtual
+								has_trait = trait_conceptoid
+								has_trait = trait_mechanical
+							}
+							NOT = {
+								OR = {
+								#	hide_age = no
+									leader age = 10
+									gender = male
+									is_immortal = no
+								}
+							}
+						}
+						OR = {
+							hide_age = yes
+							leader_age > 10
+							leader_age < 10
+							gender = female
+							gender = no
+							is_immortal = yes
+						}
+					}
+				}
+				set_age = 10
+				hide_age = no
+				set_gender = male
+				set_immortal = yes
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+				change_leader_portrait = SNAP_CodyGibling_Gadg8eer
+				set_global_flag = Global_Gadg8eer
+				set_country_flag = Country_Gadg8eer
+				set_leader_flag = Gadg8eer
+			}
+		}
+	}
+	
+	### Sorry, but you don't get to rename me!
+	triggered_self_modifier = {
+		pre_triggers = {
+			# only if the leader exists and is alive
+			has_owner = yes
+			# except if the leader is idle
+			is_idle = no
+		}
+		who = {
+			event_target:Gadg8eer = {
+				potential = {
+					on_single_player_save_game_load
+					OR = {
+#						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+#						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+				change_leader_portrait = SNAP_CodyGibling_Gadg8eer
+				set_global_flag = Global_Gadg8eer
+				set_country_flag = Country_Gadg8eer
+				set_leader_flag = Gadg8eer
+			}
+		}
+	}
+	
+### Tooltip
+	triggered_self_modifier = {
+		#has potential only when NOT on council
+		potential = {
+			is_councilor = no
+		}
+		#show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
+		show_if_not_potential = yes
+		not_potential_override_text_key = SNAP_CodyGibling_Gadg8eer_on_council
 		leaders_upkeep_mult = -0.10 #tooltip displays game's default reduction in leader upkeep from removing councillor
 	}
 ### Leader bonuses
