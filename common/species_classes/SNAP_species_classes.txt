@@ -83,14 +83,14 @@ TOON = { # Sapient fictional characters and lucid dreamers who ascended via the 
 		}
 	}
 
-	#gender = yes
-	#portrait_modding = yes
+	gender = yes
+	portrait_modding = yes
 
 	leader_age_min = 0
-	immortal = no # Depends on the individual
+	immortal = yes # I don't think cartoon characters actually age? Not without a plot explanation, at least
 
 	graphical_culture = plantoid_01 #conceptoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
-	trait = "trait_conceptoid"
+	trait = "trait_toon"
 	resources = {}
 }
