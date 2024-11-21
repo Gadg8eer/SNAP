@@ -6,20 +6,19 @@
 #--------------------#
 # If you understand and accept the above conditions, you may proceed.
 
-leader_trait_SNAP_steven_wintle_jenny_everywhere = {
-	starting_ruler_trait = yes
-	cost = 0
+leader_trait_SNAP_Steven_Wintle_jenny_everywhere = {
+	cost = 1
 	inline_script = {
-		script = "leader_trait_SNAP_steven_wintle_jenny_everywhere"
+		script = "leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
 		CLASS = scientist
 		ICON = "GFX_trait_clone_soldier"
-		RARITY = unique
+		RARITY = common
 		COUNCIL = yes
 		TIER = 1
 	}
 	leader_potential_add {
 		gender = female
-		leader_class = { scientist }
+		leader_class = { ruler scientist }
 		is_councilor = no
 		NOT = {
             from = {
@@ -30,7 +29,7 @@ leader_trait_SNAP_steven_wintle_jenny_everywhere = {
 	}
 	
 	self_modifier = {
-        set_name = leader_steven_wintle_jenny_everywhere
+        set_name = leader_Steven_Wintle_jenny_everywhere
 		modification = no
 		hide_age = yes
 	}
@@ -42,7 +41,7 @@ leader_trait_SNAP_steven_wintle_jenny_everywhere = {
 			
 		}
 		show_if_not_potential = yes
-		not_potential_override_text_key = SNAP_steven_wintle_jenny_everywhere_on_council
+		not_potential_override_text_key = SNAP_Steven_Wintle_jenny_everywhere_on_council
 		leaders_upkeep_mult = -0.10
 	}
 	councilor_modifier = {
@@ -79,11 +78,11 @@ leader_trait_SNAP_steven_wintle_jenny_everywhere = {
 	ai_weight = 20
 }
 
-leader_trait_SNAP_steven_wintle_jenny_everywhere_2 = {
-	replace_traits = { "leader_trait_SNAP_steven_wintle_jenny_everywhere" }
+leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2 = {
+	replace_traits = { "leader_trait_SNAP_Steven_Wintle_jenny_everywhere" }
 	cost = 1
 	inline_script = {
-		script = "leader_trait_SNAP_steven_wintle_jenny_everywhere_2"
+		script = "leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
 		CLASS = scientist
 		ICON = "GFX_trait_ingenious"
 		RARITY = unique
@@ -101,7 +100,7 @@ leader_trait_SNAP_steven_wintle_jenny_everywhere_2 = {
 	}
 	
 	self_modifier = {
-        set_name = leader_SNAP_steven_wintle_jenny_everywhere
+        set_name = leader_SNAP_Steven_Wintle_jenny_everywhere
 		modification = no
 		hide_age = yes
 		slave_cost = {
@@ -113,7 +112,7 @@ leader_trait_SNAP_steven_wintle_jenny_everywhere_2 = {
 	triggered_self_modifier = {
 		potential = { is_councilor = no }
 		show_if_not_potential = yes
-		not_potential_override_text_key = SNAP_steven_wintle_jenny_everywhere_on_council
+		not_potential_override_text_key = SNAP_Steven_Wintle_jenny_everywhere_on_council
 		leaders_upkeep_mult = -0.10
 	}
 	councilor_modifier = {
