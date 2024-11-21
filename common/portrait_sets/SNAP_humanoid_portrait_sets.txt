@@ -138,11 +138,11 @@ humanoids_virtual = {
 		playable = no
 		portraits = {
 			"TOON_Steven_Wintle_Jenny_Everywhere"
-			"TOON_CodyGibling_Gadg8eer"
+		#	"TOON_CodyGibling_Gadg8eer"
 		}
 	}
 	non_pre_ftl_portraits = {
 		"TOON_Steven_Wintle_Jenny_Everywhere"
-		"TOON_CodyGibling_Gadg8eer"
+	#	"TOON_CodyGibling_Gadg8eer"
 	}
 }
