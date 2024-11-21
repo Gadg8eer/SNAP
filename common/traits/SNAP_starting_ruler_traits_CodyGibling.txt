@@ -37,10 +37,10 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 # can't be any of the following characters at the same time
-		"leader_trait_SNAP_MisterEightySix_arcoiris"
-		"leader_trait_SNAP_MisterEightySix_arcoiris_2"
-		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
-		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		"leader_trait_SNAP_MisterEightySix_ArcoIris"
+		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 ### 
@@ -175,10 +175,10 @@ trait_ruler_SNAP_CodyGibling_Gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 ### can't be any of the following characters at the same time
-		"leader_trait_SNAP_MisterEightySix_arcoiris"
-		"leader_trait_SNAP_MisterEightySix_arcoiris_2"
-		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
-		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		"leader_trait_SNAP_MisterEightySix_ArcoIris"
+		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	
@@ -303,10 +303,10 @@ trait_ruler_SNAP_CodyGibling_quick_Gadg8eer = {
 		"leader_trait_maniacal_2"
 		"leader_trait_maniacal_3"
 ### can't be any of the following characters at the same time
-		"leader_trait_SNAP_MisterEightySix_arcoiris"
-		"leader_trait_SNAP_MisterEightySix_arcoiris_2"
-		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
-		"leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		"leader_trait_SNAP_MisterEightySix_ArcoIris"
+		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	
