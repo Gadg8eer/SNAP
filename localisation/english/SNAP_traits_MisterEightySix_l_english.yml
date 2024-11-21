@@ -1,0 +1,10 @@
+﻿l_english:
+ #---------#
+ #Ruler OCs#
+ #---------#
+ 
+#leader_mistereightysix_arcoiris: "ArcoIris"
+ SNAP_mistereightysix_txtfrag1: "Mediamorph"
+ leader_trait_SNAP_mistereightysix_arcoiris: "The $SNAP_mistereightysix_txtfrag1$"
+ leader_trait_SNAP_mistereightysix_arcoiris_2: "$leader_trait_SNAP_mistereightysix_arcoiris$ II"
+#commented line because of paradox shenanigans
