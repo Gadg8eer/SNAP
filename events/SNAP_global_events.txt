@@ -13,10 +13,10 @@ country_event = {
 	}
 	immediate = {
 		set_global_flag = SNAP_on
-		### grant technologies here
-		#	give_technology = {
-		#		tech = tech_space_trading
-		#		message = no
-		#	}
+	####### grant technologies here
+	#	give_technology = {
+	#		tech = tech_space_trading
+	#		message = no
+	#	}
 	}
 }
