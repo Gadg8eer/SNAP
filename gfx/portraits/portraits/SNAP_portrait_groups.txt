@@ -65,9 +65,9 @@ portrait_groups = {
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
 				portraits = {
-#					example_red
-#					example_green
-#					example_blue
+					example_red
+					example_green
+					example_blue
 					XR_f
 					XR_m
 				}
@@ -78,9 +78,9 @@ portrait_groups = {
 		species = { #generic portrait for a species
 			add = {
 				portraits = {
-#					example_red
-#					example_green
-#					example_blue
+					example_red
+					example_green
+					example_blue
 					XR_f
 					XR_m
 				}
@@ -91,9 +91,9 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				portraits = {
-#					example_red
-#					example_green
-#					example_blue
+					example_red
+					example_green
+					example_blue
 					XR_f
 					XR_m
 				}
@@ -104,19 +104,17 @@ portrait_groups = {
 		leader = { #scientists, generals, admirals, governor
 			add = {
 				portraits = {
-#					example_red
-#					example_green
-#					example_blue
+					example_red
+					example_green
+					example_blue
 					XR_f
 					XR_m
 					if = {
-						NOT = {
-							has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-						}
+						has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 					} then = {
-						synthXR_Steven_Wintle_Jenny_Everywhere
+						SNAP_Steven_Wintle_Jenny_Everywhere
 					} else = {
-						synthXR_Steven_Wintle_Jenny_Everywhere
+						SNAP_Steven_Wintle_Jenny_Everywhere
 					}
 				}
 			}
@@ -173,16 +171,14 @@ portrait_groups = {
 				portraits = {
 					TOON_f
 					TOON_m
+				## "There can be only one-" Never mind.
 					if = {
-						NOT = {
-							has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-						}
+						has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 					} then = {
-						TOON_Steven_Wintle_Jenny_Everywhere
-## "There can be only one-" Never mind.
-#						TOON_CodyGibling_Gadg8eer
+						SNAP_Steven_Wintle_Jenny_Everywhere
 					} else = {
-						TOON_Steven_Wintle_Jenny_Everywhere
+						SNAP_Steven_Wintle_Jenny_Everywhere
+						SNAP_CodyGibling_Gadg8eer
 					}
 				}
 			}
