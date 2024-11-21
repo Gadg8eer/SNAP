@@ -8,13 +8,13 @@
 # If you understand and accept the above conditions, you may proceed.
 
 ### Start with Gadg8eer
-MAP_scripted_effect_codygibling_gadg8eer_start_0 = {
+SNAP_scripted_effect_codygibling_gadg8eer_start_0 = {
 	pre_triggers = {
 		has_owner = yes				# whether the leader exists and is alive
 		is_idle = yes				# whether the leader is idle
 	}
 	trigger = {
-		trait_ruler_MAP_codygibling_gadg8eer
+		trait_ruler_SNAP_codygibling_gadg8eer
 	}
 	immediate = {
 		owner = {
@@ -25,17 +25,17 @@ MAP_scripted_effect_codygibling_gadg8eer_start_0 = {
 				leader_age_max = 85
 				set_gender = male
 				hide_age = no
-				set_leader_flag = leader_is_MAP_CodyGibling_Gadg8eer
-				set_pop_flag = pop_contains_MAP_CodyGibling_Gadg8eer
+				set_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+				set_pop_flag = pop_contains_SNAP_CodyGibling_Gadg8eer
 				change_leader_portrait = 
 				}
 			}
 	# Set flag because THERE CAN BE ONLY ONE!
-		set_global_flag = global_MAP_rulerclaim_CodyGibling_Gadg8eer
+		set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 	}
 }
 
-MAP_scripted_effect_codygibling_gadg8eer_start_1 = {
+SNAP_scripted_effect_codygibling_gadg8eer_start_1 = {
 	immediate = {
 		owner = {
 			ruler = {
@@ -47,7 +47,7 @@ MAP_scripted_effect_codygibling_gadg8eer_start_1 = {
 }
 
 ### If Gadg8eer is manually removed from the position of ruler (by the player), he is returned to the position and a message is displayed.
-MAP_scripted_effect_codygibling_gadg8eer_oops_noremove = {
+SNAP_scripted_effect_codygibling_gadg8eer_oops_noremove = {
 	pre_triggers = {
 		has_owner = yes				# whether the leader exists and is alive
 		is_idle = yes				# whether the leader is idle
@@ -57,7 +57,7 @@ MAP_scripted_effect_codygibling_gadg8eer_oops_noremove = {
 			who = {
 				event_target:Gadg8eer = {
 					is_idle = yes
-					has_leader_flag = leader_is_MAP_CodyGibling_Gadg8eer
+					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 				}
 			}
 		}
@@ -65,7 +65,7 @@ MAP_scripted_effect_codygibling_gadg8eer_oops_noremove = {
 			who = {
 				event_target:Gadg8eer = {
 					assign_leader = ruler
-					set_leader_flag = prevent_remove_MAP_CodyGibling_Gadg8eer
+					set_leader_flag = prevent_remove_SNAP_CodyGibling_Gadg8eer
 					leader_event = {
 						id = metaverse.avatar.portraits_codygibling.3
 					}
@@ -77,16 +77,16 @@ MAP_scripted_effect_codygibling_gadg8eer_oops_noremove = {
 
 ### If Gadg8eer becomes 86 years old or is forcibly removed from the position of ruler, he dies.
 ### Also includes compatibility with Constructorvette Mod.
-MAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
+SNAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
 	on_leader_death = {
 		limit = {
 			who = {
 				event_target:Gadg8eer = {
-					has_leader_flag = leader_is_MAP_CodyGibling_Gadg8eer
+					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 				}
 			}
 		}
-		set_global_flag = MAP_CodyGibling_Gadg8eer_is_dead
+		set_global_flag = SNAP_CodyGibling_Gadg8eer_is_dead
 	}
 	on_ruler_removed = {
 		pre_triggers = {
@@ -95,7 +95,7 @@ MAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
 		limit = {
 			who = {
 				event_target:Gadg8eer = {
-					is_deadbutessential_MAP_codygibling_gadg8eer = yes
+					is_deadbutessential_SNAP_codygibling_gadg8eer = yes
 				}
 			}
 		}
@@ -122,7 +122,7 @@ MAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
 		limit = {
 			who = {
 				event_target:Gadg8eer = {
-					is_deadbutessential_MAP_codygibling_gadg8eer = yes
+					is_deadbutessential_SNAP_codygibling_gadg8eer = yes
 				}
 			}
 		}
@@ -145,7 +145,7 @@ MAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
 	= {
 		any_owned_ship = {
 			AND = {
-				has_ship_flag = ship_flag_MAP_CodyGibling_Gadg8eer
+				has_ship_flag = ship_flag_SNAP_CodyGibling_Gadg8eer
 				is_ship_class = shipclass_colonizer
 			}
 		}
