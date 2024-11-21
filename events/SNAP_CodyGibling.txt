@@ -1,15 +1,15 @@
-namespace = snap_codygibling
+namespace = snap_CodyGibling
 
 ### At the game start, set gadg8eer's age to 10, enforce his name, and set his maximum lifespan to 85
 on_game_start = {
-	id = snap_codygibling.0
+	id = snap_CodyGibling.0
 	hide_window = yes
-	# title = snap_codygibling.0.name
-	# desc = snap_codygibling.0.desc_01
+	# title = snap_CodyGibling.0.name
+	# desc = snap_CodyGibling.0.desc_01
 	is_triggered_only = yes
 	fire_only_once = yes
-	# title = snap_codygibling.0.name
-	# desc = snap_codygibling.0.desc_01
+	# title = snap_CodyGibling.0.name
+	# desc = snap_CodyGibling.0.desc_01
 
 	# picture = GFX_evt_astral_rift_tomb
 	# show_sound = event_default
@@ -21,7 +21,7 @@ on_game_start = {
 		SNAP_startup_trigger_CodyGibling_Gadg8eer_0 = true
 	}
 	effect = { # SNAP_scripted_effects
-		set_global_flag = SNAP_scripted_effect_codygibling_gadg8eer_start_0
+		set_global_flag = SNAP_scripted_effect_CodyGibling_gadg8eer_start_0
 		
 		SNAP_start_0_gadg8eer = true
 	}
@@ -29,12 +29,12 @@ on_game_start = {
 
 ### At the beginning of play, save Gadg8eer as an event target
 leader_event = {
-	id = snap_codygibling.1
+	id = snap_CodyGibling.1
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
-	# title = snap_codygibling.1.name
-	# desc = snap_codygibling.1.desc_01
+	# title = snap_CodyGibling.1.name
+	# desc = snap_CodyGibling.1.desc_01
 	
 	pre_triggers = {
 		has_owner = yes				# whether the leader exists and is alive
@@ -52,9 +52,9 @@ leader_event = {
 
 ### If Gadg8eer becomes 86 years old, he dies.
 leader_event = {
-	id = snap_codygibling.2
-	title = snap_codygibling.2.name
-	desc = snap_codygibling.2.desc_01
+	id = snap_CodyGibling.2
+	title = snap_CodyGibling.2.name
+	desc = snap_CodyGibling.2.desc_01
 	is_triggered_only = yes
 
 	picture = GFX_evt_astral_rift_tomb
@@ -72,8 +72,8 @@ leader_event = {
 
 ### If Gadg8eer dies by accident or turns 86 years old without any form of immortality, it's game over.
 	option = {
-		name = snap_codygibling.2.a # Game over
-		custom_tooltip = snap_codygibling.2.a.tooltip
+		name = snap_CodyGibling.2.a # Game over
+		custom_tooltip = snap_CodyGibling.2.a.tooltip
 		exclusive_trigger = {
 			
 		}
@@ -88,8 +88,8 @@ leader_event = {
 
 ### If Gadg8eer manages to achieve miscellaneous immortality, but dies to an event, he is saved ONCE by rejuvenation and cloning tech.
 	option = {
-		name = snap_codygibling.2.b # Saved by biological immortality or some other form of immortality
-		custom_tooltip = snap_codygibling.2.b.tooltip
+		name = snap_CodyGibling.2.b # Saved by biological immortality or some other form of immortality
+		custom_tooltip = snap_CodyGibling.2.b.tooltip
 		allow = {
 			is_deadbutimmortal_gadg8eer = true
 		}
@@ -104,8 +104,8 @@ leader_event = {
 	
 ### If Gadg8eer is a Conceptoid, he wakes up in a new dreamscape when he dies
 	option = {
-		name = snap_codygibling.2.c # Conceptoid
-		custom_tooltip = snap_codygibling.2.c.tooltip
+		name = snap_CodyGibling.2.c # Conceptoid
+		custom_tooltip = snap_CodyGibling.2.c.tooltip
 		trigger = {
 			is_deadbutdreaming_gadg8eer = true
 		}
@@ -117,8 +117,8 @@ leader_event = {
 
 ### If Gadg8eer's empire manages to get the right ascension perks, he respawns when he dies
 	option = {
-		name = snap_codygibling.2.d # Is immortal as a virtual entity
-		custom_tooltip = snap_codygibling.2.d.tooltip
+		name = snap_CodyGibling.2.d # Is immortal as a virtual entity
+		custom_tooltip = snap_CodyGibling.2.d.tooltip
 		allow = {
 			is_deadbutrespawns_gadg8eer = yes
 		}
@@ -131,9 +131,9 @@ leader_event = {
 
 ### If the player attempts to remove Gadg8eer from power, he will be automatically reinstated and an event will trigger.
 leader_event = {
-	id = snap_codygibling.3
-	title = snap_codygibling.3.name
-	desc = snap_codygibling.3.desc_01
+	id = snap_CodyGibling.3
+	title = snap_CodyGibling.3.name
+	desc = snap_CodyGibling.3.desc_01
 	is_triggered_only = yes
 
 	picture = GFX_origin_legendary_leader
@@ -148,8 +148,8 @@ leader_event = {
 
 ### The "can't remove this ruler" message.
 	option = {
-		name = snap_codygibling.3.a # Game over
-		custom_tooltip = snap_codygibling.3.a.tooltip
+		name = snap_CodyGibling.3.a # Game over
+		custom_tooltip = snap_CodyGibling.3.a.tooltip
 		trigger = {
 			who = {
 				event_target:Gadg8eer = {
