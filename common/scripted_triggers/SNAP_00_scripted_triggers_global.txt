@@ -1,5 +1,5 @@
-### URSIP is Active
-usrsip_active_startup = {
+### SNAP is Active
+SNAP_active_startup = {
 	pre_triggers = {
 		metaverse.avatar.portraits.start.1 = yes				# whether the leader exists and is alive
 	}
