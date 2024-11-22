@@ -1,0 +1,16 @@
+toon_set = {
+	species_class = TOON
+
+	portraits = {
+		"toon"
+		"oneiroid"
+		"comet"
+		"suprema"
+		"wisp"
+		"eyes"
+		"plant"
+		"balance"
+		"plaguebug"
+		"humanconcept"
+	}
+}

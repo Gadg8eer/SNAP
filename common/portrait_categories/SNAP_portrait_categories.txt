@@ -1,6 +1,16 @@
 # Categories of portrait sets used in empire design view.
 # Portrait sets are listed in portrait_sets database.
 
+oneiroids = {
+	name = ONEIROID
+
+	sets = {
+		example
+		synthetic_humanoids
+		conceptoids
+	}
+}
+
 toons = {
 	name = TOON
 

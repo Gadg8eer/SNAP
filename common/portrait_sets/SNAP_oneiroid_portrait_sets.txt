@@ -1,0 +1,18 @@
+oneiroid_set = {
+	species_class = ONEIROID
+
+	portraits = {
+		"example"
+		"oneiroid"
+		"comet"
+		"suprema"
+		"wisp"
+		"eyes"
+		"plant"
+		"balance"
+		"plaguebug"
+		"humanconcept"
+		"humanoid_elf"
+		"toon"
+	}
+}
