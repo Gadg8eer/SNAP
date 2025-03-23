@@ -4,7 +4,7 @@
  #---------#
  
 #leader_CodyGibling_Gadg8eer: "Gadg8eer"
- SNAP_CodyGibling_txtfrag8: "§RGadg8eer © 1990-2024 Cody Gibling. All Rights reserved.\n\n§KGadg8eer\™ as a fictional character is a trademark of Cody Gibling under Canadian trademark law. Please don't use without permission, you'd be messing with my persona.§T"
+ SNAP_CodyGibling_txtfrag8: "§RGadg8eer © 1990-2024 Cody Gibling. All Rights reserved.\n\n§KGadg8eer™ as a fictional character is a trademark of Cody Gibling under Canadian trademark law. Please don't use without permission, you'd be messing with my persona.§T"
  SNAP_CodyGibling_txtfrag10: "Gadgeteer"
  leader_trait_SNAP_CodyGibling_Gadg8eer: "The $SNAP_CodyGibling_txtfrag10$"
  leader_trait_SNAP_CodyGibling_Gadg8eer_desc: "This leader has a shockingly youthful Residual Self-Image, having just achieved self-determination very early in [pop.GetHerHis] life. [pop.GetSheHe] seems promising but with great power often comes great tradeoffs.\n----------\n$SNAP_CodyGibling_txtfrag8$"
