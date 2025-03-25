@@ -1,7 +1,11 @@
 ### SNAP is Active
 SNAP_active_startup = {
-	pre_triggers = {
-		metaverse.avatar.portraits.start.1 = yes				# whether the leader exists and is alive
-	}
-	is_triggered_only = yes
+    pre_triggers = {
+        snap.start.1 = yes                # whether the leader exists and is alive
+    }
+    is_triggered_only = yes
+    triggers = {
+        on_game_start = {}
+    }
+    SNAP_startup_trigger_0 = true
 }
