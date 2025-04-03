@@ -1,0 +1,74 @@
+# Cody Gibling's Gadg8eer
+# This file is part of the Metaverse Avatar Portraits (MAP) mod for Stellaris.
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+# Gadg8eer © 1990-2024 Cody Gibling. All Rights reserved.
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+on_leader_death = {
+    if = {
+        limit = {
+            who = {
+                event_target:Gadg8eer = {
+                    has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+                }
+            }
+        }
+        set_global_flag = SNAP_CodyGibling_Gadg8eer_is_dead
+    }
+}
+    on_ruler_removed = {
+        pre_triggers = {
+            has_owner = yes                # whether the leader exists and is alive
+        }
+        limit = {
+            who = {
+                event_target:Gadg8eer = {
+                    is_deadbutessential_SNAP_CodyGibling_Gadg8eer = yes
+                }
+            }
+        }
+        immediate = {
+            who = {
+                event_target:Gadg8eer = {
+                    kill_leader = {
+                        show_notification = no
+                        fire = no
+                    }
+                }
+            }
+            owner = {
+                country = {
+                    destroy_country = yes #ARE YOU SURE ABOUT THIS?  DELETING THE ENTIRE COUNTRY?
+                }
+            }
+        }
+    }
+    on_ruler_back_to_pre_ruler_class = { #THIS WILL NOT WORK HERE
+        pre_triggers = {
+            has_owner = yes                # whether the leader exists and is alive
+        }
+        limit = {
+            who = {
+                event_target:Gadg8eer = {
+                    is_deadbutessential_SNAP_CodyGibling_Gadg8eer = yes
+                }
+            }
+        }
+        immediate = {
+            who = {
+                event_target:Gadg8eer = {
+                    kill_leader = {
+                        show_notification = no
+                        fire = no
+                    }
+                }
+            }
+            owner = {
+                country = {
+                    destroy_country = yes #ARE YOU SURE ABOUT THIS? DELETING THE ENTIRE COUNTRY?
+                }
+            }
+        }
+    }
+}
+
