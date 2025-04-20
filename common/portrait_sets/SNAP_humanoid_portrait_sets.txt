@@ -44,15 +44,52 @@ virtual_humanoids = {
 	}
 
 	conditional_portraits = {
-		randomizable = no
+		randomizable = {
+			AND = {
+				OR = {
+					host_has_dlc = "Humanoids Species Pack"
+					local_has_dlc = "Humanoids Species Pack"
+				}
+				pop_has_trait = trait_virtual
+				OR = {
+					// Must be female to be a Jenny Everywhere.
+					// Not excluding transgender, just not aware of how to program that yet.
+					gender = female
+					// If either gender can be leader, or the gender is determined at random, for this species, Jenny can also result from any species with no set gender being uploaded.
+					species_gender = indeterminable
+					species_gender = not_set
+				}
+			}
+		}
 		playable = no
 		portraits = {
 			"HUM_Steven_Wintle_Jenny_Everywhere"
-		#	"HUM_CodyGibling_Gadg8eer"
+##		#	"HUM_CodyGibling_Gadg8eer"
 		}
 	}
 	non_pre_ftl_portraits = {
-		"HUM_Steven_Wintle_Jenny_Everywhere"
-	#	"HUM_CodyGibling_Gadg8eer"
+		randomizable = {
+			AND = {
+				OR = {
+					host_has_dlc = "Humanoids Species Pack"
+					local_has_dlc = "Humanoids Species Pack"
+				}
+				pop_has_trait = trait_virtual
+				OR = {
+					// Must be female to be a Jenny Everywhere.
+					// Not excluding transgender, just not aware of how to program that yet.
+					gender = female
+					// If either gender can be leader, or the gender is determined at random, for this species, Jenny can also result from any species with no set gender being uploaded.
+					species_gender = indeterminable
+					species_gender = not_set
+					// 
+					has_tradition = 
+				}
+			}
+		}
+		playable = no
+		portraits = {
+			"HUM_Steven_Wintle_Jenny_Everywhere"
+##		#	"HUM_CodyGibling_Gadg8eer"
+		}
 	}
-}
