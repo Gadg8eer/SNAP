@@ -1,0 +1,545 @@
+# Cody Gibling's Gadg8eer
+#- (Trademarked; I, the original creator of this file, am the one who goes by the name Cody Gibling, though to be honest its a pen name because I like my work to be able to stand on its own merits. Please don't repost this file anywhere except Stellaris mod-related websites (Steam, the Stellaris community on the FediVerse, Good Old Games, Stellaris fan forums and Guilded servers, etc.), though anyone is free to update the mod including this file to run with any version of Stellaris they prefer.) -#
+# This file is part of the Virtual Avatars: Residual Self-Image Portraits (URSIP) mod for Stellaris. The character portraits provided by this file are used under license or with the permission of the character's creator. Please read the code comments (the #???? thingies just below this) to understand what is and isn't legally okay to do with this artist's works.
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+# Gadg8eer © 1990-2024 Cody Gibling. All Rights reserved.																												 #
+# Gadg8eer™ as a fictional character is a trademark of Cody Gibling under Canadian trademark law. Please don't use without permission, you'd be messing with my persona. #
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+# If you understand and accept the above conditions, you may proceed.
+
+leader_trait_SNAP_CodyGibling_Gadg8eer = {
+    is_visible = yes
+    is_positive = yes
+    is_ruler_trait = yes
+    valid_for_all_ethics = no
+    inline_script = {
+        script = trait/icon
+        CLASS = scientist
+        ICON = "GFX_trait_mechanical"
+        RARITY = common
+        COUNCIL = yes
+        TIER = 1
+    }
+    potential = {
+        NOT = {
+            has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+        }
+    }
+    opposites = {
+        "leader_trait_paranoid"
+        "leader_trait_paranoid_2"
+        "leader_trait_spark_of_genius"
+        "leader_trait_spark_of_genius_2"
+        "leader_trait_maniacal"
+        "leader_trait_maniacal_2"
+        "leader_trait_maniacal_3"
+        # can't be any of the following characters at the same time
+        "leader_trait_SNAP_MisterEightySix_ArcoIris"
+        "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+        "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+        "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+        "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+        "leader_trait_SNAP_CodyGibling_social_Gadg8eer"
+        "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+    }
+    modifier = {
+        physics_research_speed = 0.1
+        society_research_speed = 0.1
+        engineering_research_speed = 0.1
+    }
+    allowed_ethics = {ethic_authoritarian ethic_egalitarian ethic_fanatic_egalitarian ethic_xenophile ethic_fanatic_xenophile ethic_militarist ethic_spiritualist ethic_materialist ethic_}
+    on_game_start = {
+        if = {
+            limit = {
+                AND = {
+                    OR = {
+                        is_ruler = yes
+                        is_heir = yes
+                    }
+                    OR = {
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+                    }
+                }
+            }
+            set_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+            set_global_flag = SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0
+            set_leader_flag = event_target:Gadg8eer
+            set_name = leader_CodyGibling_Gadg8eer/ruler
+        }
+    }
+    on_add = {
+        # If virtual, conceptual or robotic, force age to 10 if not already
+        if = {
+            limit = {
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            set_immortal = yes
+        }
+    }
+    on_age_change = {
+        # Reset age to 10 on any age change
+        if = {
+            limit = {
+				has_leader_flag = event_target:Gadg8eer
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+    ### Tooltip
+    triggered_self_modifier = {
+        # has potential only when NOT on council
+        potential = {
+            is_councilor = no
+        }
+        # show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
+        show_if_not_potential = yes
+        not_potential_override_text_key = SNAP_CodyGibling_Gadg8eer_on_council
+        leaders_upkeep_mult = -0.10 # tooltip displays game's default reduction in leader upkeep from removing councillor
+    }
+    ### Leader bonuses
+    councilor_modifier = {
+        category_physics_research_speed_mult = 0.08
+        category_engineering_research_speed_mult = 0.10
+        # increased chance to discover rare techs (weighted in tech-script)
+        species_leader_exp_gain = 0.10
+    }
+}
+
+leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
+    inline_script = {
+        script = trait/icon
+        CLASS = scientist
+        ICON = "GFX_trait_mechanical"
+        RARITY = common
+        COUNCIL = yes
+        TIER = 2
+    }
+    is_visible = yes
+    is_positive = yes
+    is_ruler_trait = yes
+    potential = {
+        has_leader_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+        NOT = {
+            OR = {
+                from = {
+                    # No Gadg8eer hive mind
+                    has_ethic = "ethic_gestalt_consciousness"
+                    # No evil dictatorship for Gadg8eer
+                    has_ethic = "ethic_fanatic_authoritarian"
+                    # No bigotry from Gadg8eer
+                    has_ethic = "ethic_xenophobe"
+                    has_ethic = "ethic_fanatic_xenophobe"
+                    # No warmongering from Gadg8eer
+                    has_ethic = "ethic_fanatic_militarist"
+                    # No zealotry from Gadg8eer
+                    has_ethic = "ethic_fanatic_spiritualist"
+                    # No anti-escapism from Gadg8eer
+                    has_ethic = "ethic_fanatic_materialist"
+                }
+            }
+            has_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+        }
+    }
+    opposites = {
+        "leader_trait_paranoid"
+        "leader_trait_paranoid_2"
+        "leader_trait_spark_of_genius"
+        "leader_trait_spark_of_genius_2"
+        "leader_trait_maniacal"
+        "leader_trait_maniacal_2"
+        "leader_trait_maniacal_3"
+        # can't be any of the following characters at the same time
+        "leader_trait_SNAP_MisterEightySix_ArcoIris"
+        "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+        "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+        "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+        "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+    }
+    modifier = {
+        physics_research_speed = 0.2
+        society_research_speed = 0.2
+        engineering_research_speed = 0.2
+    }
+    on_game_start = {
+        if = {
+            limit = {
+                AND = {
+                    OR = {
+                        is_ruler = yes
+                        is_heir = yes
+                    }
+                    OR = {
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+                    }
+                }
+            }
+            set_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+            set_global_flag = SNAP_scripted_effect_CodyGibling_gadg8eer_start_0
+            set_leader_flag = event_target:Gadg8eer
+        }
+    }
+    on_add = {
+        # If virtual, conceptual or robotic, force age to 10 if not already
+        if = {
+            limit = {
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+    on_age_change = {
+        # Reset age to 10 on any age change
+        if = {
+            limit = {
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+}
+
+leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
+    inline_script = {
+        script = trait/icon
+        CLASS = scientist
+        ICON = "GFX_trait_mechanical"
+        RARITY = common
+        COUNCIL = yes
+        TIER = 2
+    }
+    is_visible = yes
+    is_positive = yes
+    is_ruler_trait = yes
+    potential = {
+        has_leader_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+        NOT = {
+            OR = {
+                from = {
+                    # No Gadg8eer hive mind
+                    has_ethic = "ethic_gestalt_consciousness"
+                    # No evil dictatorship for Gadg8eer
+                    has_ethic = "ethic_fanatic_authoritarian"
+                    # No bigotry from Gadg8eer
+                    has_ethic = "ethic_xenophobe"
+                    has_ethic = "ethic_fanatic_xenophobe"
+                    # No warmongering from Gadg8eer
+                    has_ethic = "ethic_fanatic_militarist"
+                    # No zealotry from Gadg8eer
+                    has_ethic = "ethic_fanatic_spiritualist"
+                    # No anti-escapism from Gadg8eer
+                    has_ethic = "ethic_fanatic_materialist"
+                }
+            }
+            has_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+        }
+        opposites = {
+            "leader_trait_paranoid"
+            "leader_trait_paranoid_2"
+            "leader_trait_spark_of_genius"
+            "leader_trait_spark_of_genius_2"
+            "leader_trait_maniacal"
+            "leader_trait_maniacal_2"
+            "leader_trait_maniacal_3"
+            # can't be any of the following characters at the same time
+            "leader_trait_SNAP_MisterEightySix_ArcoIris"
+            "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+            "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+            "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+            "leader_trait_SNAP_CodyGibling_Gadg8eer"
+            "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+            "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+        }
+    }
+    modifier = {
+        society_research_speed = 0.4
+    }
+    on_game_start = {
+        if = {
+            limit = {
+                AND = {
+                    OR = {
+                        is_ruler = yes
+                        is_heir = yes
+                    }
+                    OR = {
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+                    }
+                }
+            }
+            set_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+            set_global_flag = SNAP_scripted_effect_CodyGibling_gadg8eer_start_0
+            set_leader_flag = event_target:Gadg8eer
+        }
+    }
+    on_add = {
+        # If virtual, conceptual or robotic, force age to 10 if not already
+        if = {
+            limit = {
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+    on_age_change = {
+        # Reset age to 10 on any age change
+        if = {
+            limit = {
+				has_leader_flag = event_target:Gadg8eer
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+}
+
+leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
+    is_visible = yes
+    is_positive = yes
+    is_ruler_trait = yes
+    inline_script = {
+        script = trait/icon
+        CLASS = scientist
+        ICON = "GFX_trait_mechanical"
+        RARITY = common
+        COUNCIL = yes
+        TIER = 1
+    }
+    potential = {
+        NOT = {
+            OR = {
+                from = {
+                    # No Gadg8eer hive mind
+                    has_ethic = "ethic_gestalt_consciousness"
+                    # No evil dictatorship for Gadg8eer
+                    has_ethic = "ethic_fanatic_authoritarian"
+                    # No bigotry from Gadg8eer
+                    has_ethic = "ethic_xenophobe"
+                    has_ethic = "ethic_fanatic_xenophobe"
+                    # No warmongering from Gadg8eer
+                    has_ethic = "ethic_fanatic_militarist"
+                    # No zealotry from Gadg8eer
+                    has_ethic = "ethic_fanatic_spiritualist"
+                    # No anti-escapism from Gadg8eer
+                    has_ethic = "ethic_fanatic_materialist"
+                }
+            }
+            has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+        }
+        opposites = {
+            "leader_trait_paranoid"
+            "leader_trait_paranoid_2"
+            "leader_trait_spark_of_genius"
+            "leader_trait_spark_of_genius_2"
+            "leader_trait_maniacal"
+            "leader_trait_maniacal_2"
+            "leader_trait_maniacal_3"
+            # can't be any of the following characters at the same time
+            "leader_trait_SNAP_MisterEightySix_ArcoIris"
+            "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+            "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+            "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+            "leader_trait_SNAP_CodyGibling_Gadg8eer"
+            "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+            "leader_trait_SNAP_CodyGibling_social_Gadg8eer"
+        }
+    }
+    modifier = {
+        physics_research_speed = 0.25
+        society_research_speed = 0.25
+        engineering_research_speed = 0.25
+    }
+    on_game_start = {
+        if = {
+            limit = {
+                AND = {
+                    OR = {
+                        is_ruler = yes
+                        is_heir = yes
+                    }
+                    OR = {
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+                        has_ruler_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+                    }
+                }
+            }
+            set_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+            set_global_flag = SNAP_scripted_effect_CodyGibling_gadg8eer_start_0
+            set_leader_flag = event_target:Gadg8eer
+            set_name = leader_CodyGibling_Gadg8eer/ruler
+        }
+    }
+    on_add = {
+        # If virtual, conceptual or robotic, force age to 10 if not already
+        if = {
+            limit = {
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+    on_age_change = {
+        # Reset age to 10 on any age change
+        if = {
+            limit = {
+				has_leader_flag = event_target:Gadg8eer
+                OR = {
+                    is_robotic = yes
+                    has_trait = trait_virtual
+                    has_trait = trait_conceptoid
+                }
+                NOT = {
+                    age = 10
+                }
+            }
+            # Force custom portrait
+            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            # Force age to 10
+            set_age = 10
+            # Affirm immortality
+            immortal_leaders = yes
+        }
+    }
+    ### Sorry, but you don't get to rename me!
+    triggered_self_modifier = {
+        pre_triggers = {
+            # only if the leader exists and is alive
+            has_owner = yes
+            # except if the leader is idle
+            is_idle = no
+        }
+        who = {
+            event_target:Gadg8eer = {
+                potential = {
+                    on_single_player_save_game_load = {
+                        has_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+                    }
+                    OR = {
+                        has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+                        has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer
+                        #                      has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+                        #                      has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+                        #                      has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+                    }
+                }
+                set_name = leader_CodyGibling_Gadg8eer/ruler
+                change_leader_portrait = SNAP_CodyGibling_Gadg8eer
+                # EVENT WINDOW TO TELL YOU THAT CAN'T RENAME THIS CHARACTER!
+                set_global_flag = global_SNAP_rulerlock_CodyGibling_Gadg8eer
+            }
+        }
+    }
+    ### Tooltip
+    triggered_self_modifier = {
+        # has potential only when NOT on council
+        potential = {
+            is_councilor = no
+        }
+        # show a tooltip, for effects of adding Gadg8eer to the council, only when on council by reversing display criteria WITHOUT reversing effect criteria
+        show_if_not_potential = yes
+        not_potential_override_text_key = SNAP_CodyGibling_Gadg8eer_on_council
+        leaders_upkeep_mult = -0.10 # tooltip displays game's default reduction in leader upkeep from removing councillor
+    }
+    ### Leader bonuses
+    councilor_modifier = {
+        category_physics_research_speed_mult = 0.08
+        category_engineering_research_speed_mult = 0.10
+        # increased chance to discover rare techs (weighted in tech-script)
+        species_leader_exp_gain = 0.10
+    }
+}
