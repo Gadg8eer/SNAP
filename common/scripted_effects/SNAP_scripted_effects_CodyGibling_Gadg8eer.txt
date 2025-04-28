@@ -1,8 +1,15 @@
-# Cody Gibling's Gadg8eer
-# This file is part of the Metaverse Avatar Portraits (MAP) mod for Stellaris.
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
-# Gadg8eer © 1990-2024 Cody Gibling. All Rights reserved.
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+# This file is part of the Stellaris Novelty Avatar Portraits (SNAP) mod for Stellaris. Avatar as in "a persona" or "a VR metaverse avatar", not the Na'vi clones in the James Cameron movies (nor anything to do with the Nickelodeon animated series "The Last Airbender" either for that matter). It basically makes anything you can depict lore-friendly by implying that anything impossible is exclusive to a simulated "metaverse".
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# The character portraits provided by this file are used under a license or with the permission of the character's creator.
+# Please read the code comments (the "# Stuff gets described in text." thingies just below this) to understand what is and isn't legally okay to do with this artist's works. Thank you.
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# Gadg8eer © 1990-2025 Cody Gibling. All Rights reserved.																					#
+# Gadg8eer™ as a fictional character is a trademark of Cody Gibling under Canadian trademark law.											#
+# Please don't use without permission, you'd be messing with my persona.																	#
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# (Trademarked; I, the original creator of this file and of the Stellaris Novelty Avatar Portraits mod, am the one who goes by the name Cody Gibling, though to be honest its a pen name because I like my work to be able to stand on its own merits. Please don't repost this file or any image file of Gadg8eer anywhere except as part of SNAP or a derivitave of SNAP, and only on Stellaris mod-related websites (Steam, the Stellaris community on the FediVerse, Good Old Games, Stellaris fan forums and Guilded servers, etc.), though anyone is free to update the mod including this file for the purposes of getting it to run with any version of Stellaris they prefer as long as they include these paragraphs.)
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# If you understand and accept the above conditions, you may proceed.
 
 ### Start with Gadg8eer
 SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = {
@@ -19,7 +26,7 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = {
                 set_name = leader_CodyGibling_Gadg8eer
                 leader_age_min = 10
                 set_age = 10
-                leader_age_max = 85
+                leader_age_max = 87
                 set_gender = male
                 hide_age = no
                 set_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
@@ -49,6 +56,9 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_oops_noremove = {
         has_owner = yes        # whether the leader exists and is alive
         is_idle = yes        # whether the leader is idle
     }
+    trigger = {
+        has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer # Check if the leader actually *has* the trait
+    }
     immediate = {
         event_target:Gadg8eer = { #removed unnecessary who = {}
             if = { #Check if ruler before attempting assignement
@@ -58,7 +68,7 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_oops_noremove = {
                 assign_leader = ruler
                 set_leader_flag = prevent_remove_SNAP_CodyGibling_Gadg8eer
                 leader_event = {
-                    id = metaverse.avatar.portraits_codygibling.3
+                    id = stellaris.novelty.avatar.portraits_codygibling.3
                 }
             }
         }
