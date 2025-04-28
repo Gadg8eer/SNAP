@@ -6,4 +6,4 @@ tags={
 }
 
 name="Stellaris Novelty Avatar Portraits"
-supported_version="3.14.*"
+supported_version="4.*"
