@@ -50,7 +50,7 @@ global_event = {
                     }
                     effect = { # SNAP_scripted_effects
                         set_global_flag = SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0
-                        set_leader_flag = CodyGibling_Gadg8eer
+                    #    set_leader_flag = CodyGibling_Gadg8eer
                     }
                 }
             }
@@ -256,15 +256,17 @@ leader_event = {
 }
 
 ### The "can't remove this ruler" message.
-    option = {
-        name = snap_CodyGibling.Gadg8eer.2.a # Game over
-        custom_tooltip = snap_CodyGibling.Gadg8eer.2.a.tooltip
-        trigger = {
-            who = {
-                event_target:Gadg8eer = {
-                    has_leader_flag = prevent_remove_gadg8eer
-        }
+option = {
+    name = snap_CodyGibling.Gadg8eer.2.a # Game over
+    custom_tooltip = snap_CodyGibling.Gadg8eer.2.a.tooltip
+    trigger = {
+        who = {
+            event_target:Gadg8eer = {
+                has_leader_flag = prevent_remove_gadg8eer
+			}
+		}
         immediate = {
             remove_leader_flag = prevent_remove_gadg8eer
         }
     }
+}
