@@ -1,3 +1,12 @@
+#example_set = {
+#	species_class = EXAMPLE
+#
+#	portraits = {
+#		"example"
+#	}
+#}
+
+
 toon_set = {
     species_class = SYNTH
 
@@ -15,6 +24,7 @@ toon_set = {
             }
         }
         portraits = {
+		    "example"
             "toon"
             "oneiroid"
             "comet"
@@ -38,11 +48,28 @@ toon_set = {
         }
     }
     non_pre_ftl_portraits = {
-        randomizable = no
+        randomizable = {
+            AND = {
+                OR = {
+                    host_has_dlc = "Humanoids Species Pack"
+                }
+                pop_has_trait = trait_virtual
+                OR = {
+                    # Must be female to be a Jenny Everywhere.
+                    # Not excluding transgender, just not aware of how to program that yet.
+                    gender = female
+                    # If either gender can be leader, or the gender is determined at random, for this species, Jenny can also result from any species with no set gender being uploaded.
+                    species_gender = indeterminable
+                    species_gender = not_set
+                    # 
+                    # has_tradition = 
+                }
+            }
+        }
         playable = no
         portraits = {
-            "SYNTH_Steven_Wintle_Jenny_Everywhere"
-        #    "SYNTH_CodyGibling_Gadg8eer"
+            "HUM_Steven_Wintle_Jenny_Everywhere"
+##        #    "HUM_CodyGibling_Gadg8eer"
         }
     }
 }
