@@ -1,15 +1,23 @@
 # Categories of portrait sets used in empire design view.
 # Portrait sets are listed in portrait_sets database.
 
-oneiroids = {
-	name = ONEIROID
+example_category = {
+	name = EXAMPLE
 
 	sets = {
-		example
-		synthetic_humanoids
-		conceptoids
+		example_set
 	}
 }
+
+#oneiroids = {
+#	name = ONEIROID
+
+#	sets = {
+#		example
+#		synthetic_humanoids
+#		conceptoids
+#	}
+#}
 
 toons = {
 	name = TOON
@@ -18,6 +26,5 @@ toons = {
 		example
 		synthetic_humanoids
 		conceptoids
-		oneiroids
 	}
 }
