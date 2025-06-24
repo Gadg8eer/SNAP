@@ -13,7 +13,7 @@
 
 ##### Gadg8eer
 ######################### Gadg8eer is a universal singularity; He only ever exists in one world at a time.
-	SNAP_CodyGibling_Gadg8eer = {
+	SNAP_portraits_CodyGibling_Gadg8eer = {
 		entity = "SNAP_portrait_CodyGibling_Gadg8eer_entity"
 		texturefile = "gfx/interface/portraits/synthetics_machine/CodyGibling/Gadg8eer.dds"
 	}
