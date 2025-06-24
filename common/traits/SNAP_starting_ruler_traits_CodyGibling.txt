@@ -18,7 +18,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 	starting_ruler_trait = yes
     inline_script = {
         script = trait/icon
-        CLASS = scientist
+        CLASS = leader
         ICON = "GFX_trait_mechanical"
         RARITY = common
         COUNCIL = yes
@@ -104,7 +104,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
                 }
             }
             # Force custom portrait
-            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
             # Force age to 10
             set_age = 10
             # Affirm immortality
@@ -126,7 +126,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
                 }
             }
             # Force custom portrait
-            set_portrait = "SNAP_CodyGibling_Gadg8eer"
+            set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
             # Force age to 10
             set_age = 10
             # Affirm immortality
