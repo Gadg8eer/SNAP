@@ -18,15 +18,18 @@ leader_trait_SNAP_portraits_CodyGibling_Gadg8eer = {
 	starting_ruler_trait = yes
 	cost = 1
     inline_script = {
-        script = trait/icon
+        script = trait/icon_mechanical
         CLASS = leader
         ICON = "GFX_trait_mechanical"
         RARITY = common
-        COUNCIL = yes
+        COUNCIL = triggered
         TIER = 1
     }
 	leader_potential_add = {
-		always = yes
+		leader_class = {
+			scientist
+			official
+		}
 	}
     potential = {
         NOT = {
@@ -159,17 +162,19 @@ leader_trait_SNAP_portraits_CodyGibling_Gadg8eer = {
 
 leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
     inline_script = {
-        script = trait/icon
+        script = trait/icon_mechanical
         CLASS = scientist
         ICON = "GFX_trait_mechanical"
         RARITY = common
-        COUNCIL = yes
+        COUNCIL = triggered
         TIER = 2
     }
-    initial = yes
-    is_councilor_trait_for_ruler = yes
-    is_ruler_trait = yes
-	starting_ruler_trait = no
+	leader_potential_add = {
+		leader_class = {
+			scientist
+			official
+		}
+	}
     potential = {
         has_leader_trait = leader_trait_SNAP_portraits_CodyGibling_Gadg8eer
         NOT = {
@@ -208,6 +213,10 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
         "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
         "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
     }
+    initial = yes
+    is_councilor_trait_for_ruler = yes
+    is_ruler_trait = yes
+	starting_ruler_trait = no
     modifier = {
         physics_research_speed = 0.2
         society_research_speed = 0.2
@@ -280,17 +289,19 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
 
 leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
     inline_script = {
-        script = trait/icon
+        script = trait/icon_mechanical
         CLASS = scientist
         ICON = "GFX_trait_mechanical"
         RARITY = common
-        COUNCIL = yes
+        COUNCIL = triggered
         TIER = 2
     }
-    initial = yes
-    is_councilor_trait_for_ruler = yes
-    is_ruler_trait = yes
-	starting_ruler_trait = no
+	leader_potential_add = {
+		leader_class = {
+			scientist
+			official
+		}
+	}
     potential = {
         has_leader_trait = leader_trait_SNAP_portraits_CodyGibling_Gadg8eer
         NOT = {
@@ -331,6 +342,10 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
         "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
         "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
     }
+    initial = yes
+    is_councilor_trait_for_ruler = yes
+    is_ruler_trait = yes
+	starting_ruler_trait = no
     modifier = {
         society_research_speed = 0.4
     }
@@ -401,22 +416,20 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 }
 
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
-    initial = yes
-    is_councilor_trait_for_ruler = yes
-    is_ruler_trait = yes
-	starting_ruler_trait = yes
-	cost = 0
-	leader_potential_add = {
-		always = yes
-	}
     inline_script = {
-        script = trait/icon
+        script = trait/icon_mechanical
         CLASS = scientist
         ICON = "GFX_trait_mechanical"
-        RARITY = common
-        COUNCIL = yes
-        TIER = 1
+        RARITY = unique
+        COUNCIL = triggered
+        TIER = none
     }
+	leader_potential_add = {
+		leader_class = {
+			scientist
+			official
+		}
+	}
     potential = {
         NOT = {
             OR = {
@@ -456,6 +469,11 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
         "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
         "leader_trait_SNAP_CodyGibling_social_Gadg8eer"
     }
+	initial = yes
+    is_councilor_trait_for_ruler = yes
+    is_ruler_trait = yes
+	starting_ruler_trait = yes
+	cost = 0
     modifier = {
         physics_research_speed = 0.25
         society_research_speed = 0.25
@@ -477,10 +495,12 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
                     }
                 }
             }
-            set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-            set_global_flag = SNAP_scripted_effect_CodyGibling_gadg8eer_start_0
-            set_leader_flag = event_target:Gadg8eer
-            set_name = leader_CodyGibling_Gadg8eer/ruler
+			self_modifier = {
+				set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				set_global_flag = SNAP_scripted_effect_CodyGibling_gadg8eer_start_0
+				set_leader_flag = event_target:Gadg8eer
+				set_name = leader_CodyGibling_Gadg8eer/ruler
+			}
         }
     }
     on_add = {
