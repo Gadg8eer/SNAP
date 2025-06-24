@@ -26,10 +26,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
         TIER = 1
     }
     leader_potential_add = {
-        leader_class = {
-            scientist
-            official
-        }
+        always = yes
     }
     potential = {
         NOT = {
@@ -425,10 +422,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
         TIER = none
     }
     leader_potential_add = {
-        leader_class = {
-            scientist
-            official
-        }
+        always = yes
     }
     potential = {
         NOT = {
