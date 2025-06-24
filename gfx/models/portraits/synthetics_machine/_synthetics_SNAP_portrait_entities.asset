@@ -20,7 +20,7 @@ entity = {
 
 }
 
-# SNAP 20 - Jenny Everywhere
+# SNAP 20 - "Balance"
 entity = {
     name ="synthetics_xr_portrait_null_entity"
     pdxmesh ="synthetics_02_portrait_03_mesh"
