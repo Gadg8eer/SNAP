@@ -15,6 +15,8 @@ leader_trait_SNAP_portraits_CodyGibling_Gadg8eer = {
     is_visible = yes
     is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
+	starting_ruler_trait = yes
+	cost = 0
     inline_script = {
         script = trait/icon
         CLASS = leader
@@ -150,9 +152,6 @@ leader_trait_SNAP_portraits_CodyGibling_Gadg8eer = {
         # increased chance to discover rare techs (weighted in tech-script)
         species_leader_exp_gain = 0.10
     }
-	
-	starting_ruler_trait = yes
-	cost = 0
 }
 
 leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
@@ -165,8 +164,10 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
         TIER = 2
     }
     is_visible = yes
-    is_positive = yes
+    is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
+	starting_ruler_trait = no
+	cost = 0
     potential = {
         has_leader_trait = leader_trait_SNAP_portraits_CodyGibling_Gadg8eer
         NOT = {
@@ -285,8 +286,10 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
         TIER = 2
     }
     is_visible = yes
-    is_positive = yes
+    is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
+	starting_ruler_trait = no
+	cost = 0
     potential = {
         has_leader_trait = leader_trait_SNAP_portraits_CodyGibling_Gadg8eer
         NOT = {
@@ -398,9 +401,10 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
     is_visible = yes
-    is_positive = yes
+    is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
 	starting_ruler_trait = yes
+	cost = 0
     inline_script = {
         script = trait/icon
         CLASS = scientist
