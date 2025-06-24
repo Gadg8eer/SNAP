@@ -1,48 +1,48 @@
 toon_set = {
-	species_class = SYNTH
+    species_class = SYNTH
 
-	conditional_portraits = {
-		randomizable = {
-			AND = {
-				host_has_dlc = "Synthetic Dawn"
-				host_has_dlc = "The Machine Age"
-			}
-		}
-		playable = {
-			AND = {
-				local_has_dlc = "Synthetic Dawn"
-				local_has_dlc = "The Machine Age"
-			}
-		}
-		portraits = {
-			"toon"
-			"oneiroid"
-			"comet"
-			"suprema"
-			"wisp"
-			"eyes"
-			"plant"
-			"balance"
-			"plaguebug"
-			"humanoid_hp_16"
-			"humanconcept"
-		}
-	}
-
-	conditional_portraits = {
-		randomizable = no
-		playable = no
-		portraits = {
-			"TOON_Steven_Wintle_Jenny_Everywhere"
-			"TOON_CodyGibling_Gadg8eer"
-		}
-	}
-	non_pre_ftl_portraits = {
-		randomizable = no
-		playable = no
-		portraits = {
-			"SYNTH_Steven_Wintle_Jenny_Everywhere"
-		#	"SYNTH_CodyGibling_Gadg8eer"
+    conditional_portraits = {
+        randomizable = {
+            AND = {
+                host_has_dlc = "Synthetic Dawn"
+                host_has_dlc = "The Machine Age"
+            }
         }
-	}
+        playable = {
+            AND = {
+                local_has_dlc = "Synthetic Dawn"
+                local_has_dlc = "The Machine Age"
+            }
+        }
+        portraits = {
+            "toon"
+            "oneiroid"
+            "comet"
+            "suprema"
+            "wisp"
+            "eyes"
+            "plant"
+            "balance"
+            "plaguebug"
+            "humanoid_hp_16"
+            "humanconcept"
+        }
+    }
+
+    conditional_portraits = {
+        randomizable = no
+        playable = no
+        portraits = {
+            "TOON_Steven_Wintle_Jenny_Everywhere"
+            "TOON_CodyGibling_Gadg8eer"
+        }
+    }
+    non_pre_ftl_portraits = {
+        randomizable = no
+        playable = no
+        portraits = {
+            "SYNTH_Steven_Wintle_Jenny_Everywhere"
+        #    "SYNTH_CodyGibling_Gadg8eer"
+        }
+    }
 }
