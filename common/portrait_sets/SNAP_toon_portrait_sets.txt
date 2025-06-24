@@ -3,12 +3,16 @@ toon_set = {
 
 	conditional_portraits = {
 		randomizable = {
-			host_has_dlc = "Synthetic Dawn"
-			host_has_dlc = "The Machine Age"
+			AND = {
+				host_has_dlc = "Synthetic Dawn"
+				host_has_dlc = "The Machine Age"
+			}
 		}
 		playable = {
-			local_has_dlc = "Synthetic Dawn"
-			local_has_dlc = "The Machine Age"
+			AND = {
+				local_has_dlc = "Synthetic Dawn"
+				local_has_dlc = "The Machine Age"
+			}
 		}
 		portraits = {
 			"toon"
@@ -30,11 +34,15 @@ toon_set = {
 		playable = no
 		portraits = {
 			"TOON_Steven_Wintle_Jenny_Everywhere"
-		#	"TOON_CodyGibling_Gadg8eer"
+			"TOON_CodyGibling_Gadg8eer"
 		}
 	}
 	non_pre_ftl_portraits = {
-		"SYNTH_Steven_Wintle_Jenny_Everywhere"
-	#	"SYNTH_CodyGibling_Gadg8eer"
+		randomizable = no
+		playable = no
+		portraits = {
+			"SYNTH_Steven_Wintle_Jenny_Everywhere"
+		#	"SYNTH_CodyGibling_Gadg8eer"
+        }
 	}
 }
