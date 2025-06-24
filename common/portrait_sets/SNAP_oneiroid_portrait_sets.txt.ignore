@@ -1,0 +1,40 @@
+oneiroid_set = {
+	species_class = CONCEPTOID
+
+	conditional_portraits = {
+		randomizable = {
+			host_has_dlc = "Astral Planes"
+		}
+		playable = {
+			local_has_dlc = "Astral Planes"
+		}
+		portraits = {
+			"oneiroid"
+			"example"
+			"comet"
+			"suprema"
+			"wisp"
+			"eyes"
+			"plant"
+			"balance"
+			"plaguebug"
+			"humanconcept"
+			"humanoid_hp_16"
+			"humanoid_elf"
+			"toon"
+		}
+	}
+
+	conditional_portraits = {
+		randomizable = no
+		playable = no
+		portraits = {
+			"CONCEPTOID_Steven_Wintle_Jenny_Everywhere"
+		#	"CONCEPTOID_CodyGibling_Gadg8eer"
+		}
+	}
+	non_pre_ftl_portraits = {
+		"CONCEPTOID_Steven_Wintle_Jenny_Everywhere"
+	#	"CONCEPTOID_CodyGibling_Gadg8eer"
+	}
+}
