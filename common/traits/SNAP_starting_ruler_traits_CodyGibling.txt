@@ -309,23 +309,23 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
             }
             has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
         }
-        opposites = {
-            "leader_trait_paranoid"
-            "leader_trait_paranoid_2"
-            "leader_trait_spark_of_genius"
-            "leader_trait_spark_of_genius_2"
-            "leader_trait_maniacal"
-            "leader_trait_maniacal_2"
-            "leader_trait_maniacal_3"
-            # can't be any of the following characters at the same time
-            "leader_trait_SNAP_MisterEightySix_ArcoIris"
-            "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
-            "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
-            "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
-            "leader_trait_SNAP_portraits_CodyGibling_Gadg8eer"
-            "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
-            "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
-        }
+	}
+    opposites = {
+        "leader_trait_paranoid"
+        "leader_trait_paranoid_2"
+        "leader_trait_spark_of_genius"
+        "leader_trait_spark_of_genius_2"
+        "leader_trait_maniacal"
+        "leader_trait_maniacal_2"
+        "leader_trait_maniacal_3"
+        # can't be any of the following characters at the same time
+        "leader_trait_SNAP_MisterEightySix_ArcoIris"
+        "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
+        "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+        "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+        "leader_trait_SNAP_portraits_CodyGibling_Gadg8eer"
+        "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+        "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
     }
     modifier = {
         society_research_speed = 0.4
