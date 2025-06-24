@@ -12,11 +12,11 @@
 # If you understand and accept the above conditions, you may proceed.
 
 leader_trait_SNAP_portraits_CodyGibling_Gadg8eer = {
-    is_visible = yes
+    initial = yes
     is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
 	starting_ruler_trait = yes
-	cost = 0
+	cost = 1
     inline_script = {
         script = trait/icon
         CLASS = leader
@@ -25,6 +25,9 @@ leader_trait_SNAP_portraits_CodyGibling_Gadg8eer = {
         COUNCIL = yes
         TIER = 1
     }
+	leader_potential_add = {
+		always = yes
+	}
     potential = {
         NOT = {
             OR = {
@@ -163,11 +166,10 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
         COUNCIL = yes
         TIER = 2
     }
-    is_visible = yes
+    initial = yes
     is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
 	starting_ruler_trait = no
-	cost = 0
     potential = {
         has_leader_trait = leader_trait_SNAP_portraits_CodyGibling_Gadg8eer
         NOT = {
@@ -285,11 +287,10 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
         COUNCIL = yes
         TIER = 2
     }
-    is_visible = yes
+    initial = yes
     is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
 	starting_ruler_trait = no
-	cost = 0
     potential = {
         has_leader_trait = leader_trait_SNAP_portraits_CodyGibling_Gadg8eer
         NOT = {
@@ -400,11 +401,14 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 }
 
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
-    is_visible = yes
+    initial = yes
     is_councilor_trait_for_ruler = yes
     is_ruler_trait = yes
 	starting_ruler_trait = yes
 	cost = 0
+	leader_potential_add = {
+		always = yes
+	}
     inline_script = {
         script = trait/icon
         CLASS = scientist
