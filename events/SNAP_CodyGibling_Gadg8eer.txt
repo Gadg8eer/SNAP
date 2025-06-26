@@ -97,9 +97,9 @@ leader_event = {
             leader_age > 85
 			OR = {
 				has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-				has_ruler_trait = 
-				has_ruler_trait = 
-				has_ruler_trait = 
+                has_ruler_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+                has_ruler_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+                has_ruler_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 			}
         }
     }
@@ -141,7 +141,7 @@ leader_event = {
             }
         }
         after = {
-			
+			remove_global_flag = CodyGibling_Gadg8eer_game_over
             # Effects that are applied after option is chosen.
             # Will generate a tooltip in addition the tooltip of every option, unless hidden_effect is used.
             hidden_effect = {
