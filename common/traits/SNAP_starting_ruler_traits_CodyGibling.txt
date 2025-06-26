@@ -11,6 +11,7 @@
 #-------------------------------------------------------------------------------------------------------------------------------------------#
 # If you understand and accept the above conditions, you may proceed.
 
+### Default Ruler Trait, Tier 1
 leader_trait_SNAP_CodyGibling_Gadg8eer = {
     initial = yes
     is_councilor_trait_for_ruler = yes
@@ -157,6 +158,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
     }
 }
 
+### Default Trait, Tier 2
 leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
     inline_script = {
         script = trait/icon_mechanical
@@ -284,6 +286,7 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
     }
 }
 
+### Default Trait, Tier 2 (Isekai Version)
 leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
     inline_script = {
         script = trait/icon_mechanical
@@ -412,6 +415,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
     }
 }
 
+### No, I'm fully aware I'm not a god. It's more a joke about how my character vaguely resembles Tet from No Game No Life. C'mon, it's Stellaris, half the point is to be able to choose to be pragmatically immoral.
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
     inline_script = {
         script = trait/icon_mechanical
