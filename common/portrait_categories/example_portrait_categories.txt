@@ -1,7 +1,0 @@
-example_category = {
-	name = EXAMPLE
-
-	sets = {
-		example_set
-	}
-}
