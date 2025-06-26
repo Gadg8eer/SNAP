@@ -15,4 +15,6 @@
  snap_codygibling.2.desc_01: "Sorry, but you cannot manually remove [Root.GetRulerName] from the [Root.GetRulerTitle] job title."
  snap_codygibling.2.a: "Oops. My mistake."
  snap_codygibling.2.a.tooltip: "Apology accepted."
+ snap_codygibling.2.b: "You have outlived your usefulness."
+ snap_codygibling.2.b.tooltip: "**£r£WARNING:£r£** DO NOT click unless you are absolutely sure! Clicking this option will immediately forfeit the game!"
 #commented line because of paradox shenanigans
