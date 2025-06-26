@@ -1,17 +1,17 @@
 SNAP_CodyGibling_Astral_NetWerks = {
     playable = yes
     graphical_culture = humanoid_01
-    ship_prefix = "K.i.D"
+    ship_prefix = "APS"
     country_type = global_event
-    name = "Stellar Kids in Defiance"
-    adjective = "Kiddish"
+    name = "Astral NetWerks"
+    adjective = "Oneiric"
     authority = auth_dictatorial
     species = {
-        name = "Kid"
+        name = "Soul"
         class = HUM
         portrait = hum_01
         traits = {
-#            "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+            "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
         }
     }
     ruler = {
@@ -19,6 +19,7 @@ SNAP_CodyGibling_Astral_NetWerks = {
         gender = male
         portrait = SNAP_portraits_CodyGibling_Gadg8eer
         traits = {
+			"trait_machine"
             "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
         }
     }
