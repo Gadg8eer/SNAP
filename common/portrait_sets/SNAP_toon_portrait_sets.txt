@@ -68,7 +68,7 @@ toon_set = {
         }
         playable = no
         portraits = {
-            "HUM_Steven_Wintle_Jenny_Everywhere"
+            "SYNTH_Steven_Wintle_Jenny_Everywhere"
 ##        #    "HUM_CodyGibling_Gadg8eer"
         }
     }
