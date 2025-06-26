@@ -30,7 +30,7 @@ on_leader_death = {
         limit = {
             who = {
                 event_target:Gadg8eer = {
-                    is_deadbutessential_SNAP_CodyGibling_Gadg8eer = yes
+                    SNAP_CodyGibling_Gadg8eer_is_deadbutessential = yes
                 }
             }
         }
@@ -43,10 +43,20 @@ on_leader_death = {
                     }
                 }
             }
-            owner = {
-                country = {
-                    destroy_country = yes #ARE YOU SURE ABOUT THIS?  DELETING THE ENTIRE COUNTRY?
-                }
+			if {
+				limit = {
+					is_multiplayer = yes
+				}
+			    owner = {
+				    country = {
+                        destroy_country = yes #ARE YOU SURE ABOUT THIS?  DELETING THE ENTIRE COUNTRY?
+                    }
+				}
+			} else {
+			    limit = {
+				    is_multiplayer = no
+				}
+				end_game = yes
             }
         }
     }
