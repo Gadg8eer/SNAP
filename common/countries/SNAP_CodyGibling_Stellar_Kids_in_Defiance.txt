@@ -10,9 +10,9 @@ SNAP_CodyGibling_Astral_NetWerks = {
         name = "Soul"
         class = HUM
         portrait = hum_01
-        traits = {
-            "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
-        }
+#        traits  = {
+#        "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+#        }
     }
     ruler = {
         name = "Gadg8eer"
