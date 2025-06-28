@@ -1,11 +1,11 @@
 SNAP_CodyGibling_KidsInDefiance = {
     playable = yes
-    graphical_culture = humanoid_01
-    ship_prefix = "APS"
+    graphical_culture = plantoid_01
+    ship_prefix = "K.i.D"
     country_type = global_event
     name = "Cosmic Kids in Defiance"
     adjective = "Kiddish"
-    authority = auth_authoritarian
+    authority = auth_dictatorial
     species = {
         name = "Kid"
         class = HUM
