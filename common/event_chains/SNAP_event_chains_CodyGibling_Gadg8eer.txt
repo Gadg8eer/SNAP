@@ -62,6 +62,7 @@ on_ruler_removed = {
             country = {
                 destroy_country = yes #If player tries to forcibly removed Gadg8eer, it will "allow" it but triggers an event. Choosing to proceed removed that player from the game.
             }
+        }
 			} else {
 			    limit = {
 				       is_multiplayer = no
