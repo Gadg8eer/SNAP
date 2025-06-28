@@ -20,7 +20,17 @@ on_leader_death = {
                 }
             }
         }
-        set_global_flag = SNAP_CodyGibling_Gadg8eer_is_dead
+        immediate = {
+            who = {
+                event_target:Gadg8eer = {
+                    kill_leader = {
+                        show_notification = no
+                        fire = no
+                    }
+                }
+             }
+            set_global_flag = SNAP_CodyGibling_Gadg8eer_is_dead
+        }
     }
 }
 on_ruler_removed = {
