@@ -11,7 +11,7 @@ SNAP_CodyGibling_KidsInDefiance = {
         class = HUM
         portrait = hum_01
 #        traits  = {
-#        "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
+#            "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 #        }
     }
     ruler = {
@@ -19,7 +19,7 @@ SNAP_CodyGibling_KidsInDefiance = {
         gender = male
         portrait = SNAP_portraits_CodyGibling_Gadg8eer
         traits = {
-			"trait_machine"
+			        "trait_machine"
             "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
         }
     }
