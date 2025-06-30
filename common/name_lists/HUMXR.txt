@@ -1,4 +1,4 @@
-﻿
+
 HUMXR = {
 	category = "Humanoid"
 	randomized = no
@@ -461,7 +461,7 @@ HUMXR = {
 		}
 
 		machine_assault_3 = {
-			# Robots, WALL-E, 3BELOW, Next-Gen, The Mitchels vs. the Machines, Ron's Gone Wrong
+			# Robots, WALL-E, 3BELOW, Next-Gen, The Mitchells vs. the Machines, Ron's Gone Wrong
 			sequential_name = HUMXR_CGIRobots
 		}
 
@@ -474,7 +474,7 @@ HUMXR = {
 		}
 
 		slave_army = {
-			sequential_name = HUMXR_BlaxplotationBuddyCops
+			sequential_name = HUMXR_BlaxploitationBuddyCops
 		}
 
 		clone_army = {
@@ -570,7 +570,7 @@ HUMXR = {
 
 		pc_savannah = {
 			names = {
-				HUMXR_PLANET_SavannahPrariesCities
+				HUMXR_PLANET_SavannahPrairiesCities
 			}
 		}
 
@@ -667,7 +667,7 @@ HUMXR = {
 			full_names = {
 			# Defaults
 				HUMXR_PROTAG_Steven_Wintle_F
-				HUMXR_PROTAG_SuggsMy****sLionel_M
+				HUMXR_PROTAG_SuggsMy****sLionel_M # Yes, this is intentionally censored
 				
 			# Cody Gibling
 				HUMXR_PROTAG_Cody_Gibling_F
