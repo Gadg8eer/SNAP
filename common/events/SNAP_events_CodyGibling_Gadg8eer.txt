@@ -1,0 +1,18 @@
+namespace = SNAP_CodyGibling_Gadg8eer
+
+event = {
+    id = SNAP_CodyGibling_Gadg8eer.0
+    hide_window = yes
+    is_triggered_only = no
+
+    immediate = {
+        every_country = {
+            limit = {
+                exists = ruler
+                ruler = { has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer }
+            }
+            set_global_flag = SNAP_CodyGibling_Gadg8eer_taken
+            ruler = { set_leader_flag = SNAP_CodyGibling_Gadg8eer_ruler }
+        }
+    }
+}
