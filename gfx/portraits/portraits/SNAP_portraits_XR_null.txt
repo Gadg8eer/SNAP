@@ -108,7 +108,7 @@
 #                            mask = "gfx/models/portraits/common/empty_portrait_evolution_mask.dds"
 #                        }
 #                    }
-######################### Gadg8eer is a universal singularity; He only ever exists in one world at a time.
+######################### Gadg8eer is an ontological singularity; He only ever exists in one world at a time, no more and no less.
 #                    values = {
                         # stage 1, Gadg8eer
 #                        { texturefile = "gfx\models\portraits\synthetics_machine\CodyGibling\Gadg8eer.dds" }
