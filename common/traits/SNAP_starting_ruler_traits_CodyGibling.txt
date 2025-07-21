@@ -13,11 +13,8 @@
 
 ### Default Ruler Trait, Tier 1
 leader_trait_SNAP_CodyGibling_Gadg8eer = {
-    initial = yes
     is_councilor_trait_for_ruler = yes
-    is_ruler_trait = yes
-	starting_ruler_trait = yes
-    cost = 1
+    cost = 0
     inline_script = {
         script = trait/icon_mechanical
         CLASS = leader
@@ -25,9 +22,6 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
         RARITY = common
         COUNCIL = triggered
         TIER = 1
-    }
-    leader_potential_add = {
-        always = yes
     }
     potential = {
         NOT = {
@@ -48,7 +42,9 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
                     has_ethic = "ethic_fanatic_materialist"
                 }
             }
-            has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+            AND = {
+                has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+            }
         }
     }
     opposites = {
@@ -64,8 +60,8 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
         "leader_trait_SNAP_MisterEightySix_ArcoIris_2"
         "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
         "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
-        "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
-        "leader_trait_SNAP_CodyGibling_social_Gadg8eer"
+#        "leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+#        "leader_trait_SNAP_CodyGibling_social_Gadg8eer"
         "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
     }
     modifier = {
@@ -74,15 +70,16 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
         engineering_research_speed = 0.1
     }
     on_game_start = {
+        events = { SNAP_CodyGibling_Gadg8eer.0 }
         if = {
             limit = {
                 AND = {
+                    has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
                     OR = {
                         is_ruler = yes
                         is_heir = yes
                     }
-                    OR = {
-                        has_ruler_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+                    NOT = {
                         has_ruler_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
                         has_ruler_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
                         has_ruler_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
@@ -156,6 +153,12 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
         # increased chance to discover rare techs (weighted in tech-script)
         species_leader_exp_gain = 0.10
     }
+    leader_class = { commander scientist official }
+    initial = no
+    randomized = no
+    
+    starting_ruler_trait = yes
+    cost = 0
 }
 
 ### Default Trait, Tier 2
@@ -167,12 +170,6 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
         RARITY = common
         COUNCIL = triggered
         TIER = 2
-    }
-    leader_potential_add = {
-        leader_class = {
-            scientist
-            official
-        }
     }
     potential = {
         has_leader_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
