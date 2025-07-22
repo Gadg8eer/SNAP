@@ -1,9 +1,10 @@
 namespace = SNAP_events_CodyGibling_Gadg8eer
 
+# Game start
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.0
 	hide_window = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 
 	immediate = {
 		limit = {
@@ -32,20 +33,42 @@ event = {
 			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 			ruler = {
 				set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+				# Force age to 8 until a later date
+				set_age = 8
+				# Optionally check if the name is not what you want
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = name value = "Gadg8eer"
+							}
+						}
+					}
+					set_name = {
+						name = "leader_CodyGibling_Gadg8eer"
+					}
+				}
 			}
 		}
 	}
 }
 
+# January 2nd, game start year
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.1
 	hide_window = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 
 	immediate = {
 		limit = {
-			has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-			is_ai = no # Only human players
+			AND = {
+				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				is_ai = no # Only human players
+			}
+		}
+		fire_event = {
+			id = SNAP_events_CodyGibling_Gadg8eer.2
+			days = 249
 		}
 		every_country = {
 			limit = {
@@ -55,34 +78,159 @@ event = {
 				}
 			}
 			ruler = {
-				set_
+				# Optionally check if the name is not what you want
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = name value = "Gadg8eer"
+							}
+						}
+					}
+					set_name = {
+						name = "leader_CodyGibling_Gadg8eer"
+					}
+				}
 			}
-			
 		}
 	}
 }
 
+# August 10th, game start year
+event = {
+	id = SNAP_events_CodyGibling_Gadg8eer.2
+	hide_window = yes
+	is_triggered_only = yes
 
+	immediate = {
+		limit = {
+			AND = {
+				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				is_ai = no # Only human players
+			}
+		}
+		fire_event = {
+			id = SNAP_events_CodyGibling_Gadg8eer.2
+			days = 360
+		}
+		every_country = {
+			limit = {
+				exists = ruler
+				ruler = {
+					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+				}
+			}
+			ruler = {
+				# Force age to 9
+				set_age = 9
 				# Optionally check if the name is not what you want
-				# if = {
-				#	 limit = { NOT = { check_variable = { which = name value = "Cody Gibling" } } }
-				set_name = { name = "leader_CodyGibling_Gadg8eer" }
-				# }
-	
-
-
-
-
-
-
-
-
-limit = {
-					any_owned_leader = {
-						
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = name value = "Gadg8eer"
+							}
+						}
+					}
+					set_name = {
+						name = "leader_CodyGibling_Gadg8eer"
 					}
 				}
-				
-				
-				
-				
+			}
+		}
+	}
+}
+
+# August 10th, game start year plus 1
+event = {
+	id = SNAP_events_CodyGibling_Gadg8eer.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		limit = {
+			AND = {
+				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				is_ai = no # Only human players
+			}
+		}
+		every_country = {
+			limit = {
+				exists = ruler
+				ruler = {
+					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+				}
+			}
+			ruler = {
+				# Force age to 10, but only once
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = global_SNAP_rulerprep_CodyGibling_Gadg8eer
+						}
+					}
+					set_age = 10
+					set_global_flag = global_SNAP_rulerprep_CodyGibling_Gadg8eer
+				}
+				# Optionally check if the name is not what you want
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = name value = "Gadg8eer"
+							}
+						}
+					}
+					set_name = {
+						name = "leader_CodyGibling_Gadg8eer"
+					}
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = SNAP_events_CodyGibling_Gadg8eer.4
+	hide_window = no
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				who = {
+					event_target_SNAP_CodyGibling_Gadg8eer = {
+						has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+						leader_age = 86
+					}
+				}
+			}
+			immediate = {
+				who = {
+					event_target_SNAP_CodyGibling_Gadg8eer = {
+						kill_leader = {
+							show_notification = no
+							fire = no
+						}
+					}
+				}
+			set_global_flag = SNAP_CodyGibling_Gadg8eer_is_dead
+				if = {
+					limit = {
+						is_multiplayer = yes
+					}
+					owner = {
+						country = {
+							destroy_country = yes #If player tries to forcibly removed Gadg8eer, it will "allow" it but triggers an event. Choosing to proceed removed that player from the game.
+						}
+					}
+				} else_if {
+					limit = {
+						is_multiplayer = no
+					}
+					end_game = yes
+				}
+			}
+		}
+	}
+}
