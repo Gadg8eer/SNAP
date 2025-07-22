@@ -110,7 +110,7 @@ event = {
 			}
 		}
 		fire_event = {
-			id = SNAP_events_CodyGibling_Gadg8eer.2
+			id = SNAP_events_CodyGibling_Gadg8eer.3
 			days = 360
 		}
 		every_country = {
@@ -193,7 +193,7 @@ event = {
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.4
 	hide_window = no
-	is_triggered_only = yes
+	is_triggered_only = no
 
 	immediate = {
 		if = {
@@ -201,7 +201,10 @@ event = {
 				who = {
 					event_target_SNAP_CodyGibling_Gadg8eer = {
 						has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
-						leader_age = 86
+						AND = {
+							leader_age = 86
+							is_immortal = no
+						}
 					}
 				}
 			}
@@ -229,6 +232,71 @@ event = {
 						is_multiplayer = no
 					}
 					end_game = yes
+				}
+			}
+		} else_if = {
+			limit = {
+				who = {
+					event_target_SNAP_CodyGibling_Gadg8eer = {
+						has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+						AND = {
+							leader_age = 86
+							is_immortal = yes
+							OR = {
+								has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+								has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+								has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							}
+						}
+					}
+				}
+			}
+			immediate = {
+				who = {
+					event_target_SNAP_CodyGibling_Gadg8eer = {
+						set_immortal = no
+					}
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = SNAP_events_CodyGibling_Gadg8eer.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		limit = {
+			AND = {
+				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				is_ai = no # Only human players
+			}
+		}
+		if = {
+			limit = {
+				who = {
+					event_target_SNAP_CodyGibling_Gadg8eer = {
+						has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+						AND = {
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+							NOT = {
+								leader_age = 10
+							}
+							NOT = {
+								is_immortal = yes
+							}
+						}
+					}
+				}
+			}
+			immediate = {
+				who = {
+					event_target_SNAP_CodyGibling_Gadg8eer = {
+						set_immortal = yes
+						set_age = 10
+					}
 				}
 			}
 		}
