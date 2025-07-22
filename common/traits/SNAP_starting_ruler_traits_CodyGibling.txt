@@ -106,8 +106,8 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 			}
 			# Force custom portrait
 			set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
-			# Force age to 10
-			set_age = 10
+			# Force age to 10 (Done via event to allow a progression of birthdays)
+			# set_age = 10
 			# Affirm immortality
 			immortal_leaders = yes
 		}
