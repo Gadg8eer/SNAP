@@ -1,0 +1,13 @@
+### At the beginning of play, save the character (Gadg8eer) as an event target, and give global flags to prevent other players from using the same character.
+on_game_start = {
+    events = {
+        SNAP_CodyGibling_Gadg8eer.0
+    }
+}
+
+
+on_death_CodyGibling_Gadg8eer = {
+    events = {
+        SNAP_CodyGibling_Gadg8eer.4
+    }
+}
