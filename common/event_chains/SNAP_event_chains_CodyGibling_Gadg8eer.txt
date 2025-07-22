@@ -15,14 +15,14 @@ on_leader_death = {
 	if = {
 		limit = {
 			who = {
-				event_target:Gadg8eer = {
+				event_target_SNAP_CodyGibling_Gadg8eer = {
 					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 				}
 			}
 		}
 		immediate = {
 			who = {
-				event_target:Gadg8eer = {
+				event_target_SNAP_CodyGibling_Gadg8eer = {
 					kill_leader = {
 						show_notification = no
 						fire = no
@@ -39,14 +39,14 @@ on_ruler_removed = {
 	}
 	limit = {
 		who = {
-			event_target:Gadg8eer = {
+			event_target_SNAP_CodyGibling_Gadg8eer = {
 				SNAP_CodyGibling_Gadg8eer_is_deadbutessential = yes
 			}
 		}
 	}
 	immediate = {
 		who = {
-			event_target:Gadg8eer = {
+			event_target_SNAP_CodyGibling_Gadg8eer = {
 				kill_leader = {
 					show_notification = no
 					fire = no
