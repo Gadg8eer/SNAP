@@ -11,10 +11,10 @@
 #-------------------------------------------------------------------------------------------------------------------------------------------#
 # If you understand and accept the above conditions, you may proceed.
 
-leader_trait_SNAP_Steven_Wintle_jenny_everywhere = {
+leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere = {
 	cost = 1
 	inline_script = {
-		script = "leader_trait_SNAP_Steven_Wintle_jenny_everywhere"
+		script = "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
 		CLASS = scientist
 		ICON = "GFX_trait_clone_soldier"
 		RARITY = common
@@ -34,7 +34,7 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere = {
 	}
 	
 	self_modifier = {
-        set_name = leader_Steven_Wintle_jenny_everywhere
+        set_name = leader_Steven_Wintle_Jenny_Everywhere
 		modification = no
 		hide_age = yes
 	}
@@ -46,7 +46,7 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere = {
 			
 		}
 		show_if_not_potential = yes
-		not_potential_override_text_key = SNAP_Steven_Wintle_jenny_everywhere_on_council
+		not_potential_override_text_key = SNAP_Steven_Wintle_Jenny_Everywhere_on_council
 		leaders_upkeep_mult = -0.10
 	}
 	councilor_modifier = {
@@ -69,12 +69,12 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere = {
 
 ### Trait conflicts
 	opposites = {
-		leader_trait_SNAP_mistereightysix_arcoiris
-		leader_trait_SNAP_mistereightysix_arcoiris_2
-		leader_trait_SNAP_codygibling_gadg8eer
-        leader_trait_SNAP_codygibling_quick_gadg8eer
-		leader_trait_SNAP_codygibling_social_gadg8eer
-		leader_trait_SNAP_codygibling_playing_gadg8eer
+		leader_trait_SNAP_MisterEightySix_ArcoIris
+		leader_trait_SNAP_MisterEightySix_ArcoIris_2
+		leader_trait_SNAP_CodyGibling_Gadg8eer
+        leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+		leader_trait_SNAP_CodyGibling_social_Gadg8eer
+		leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 	}
 	selectable_weight = {
 		weight = @class_trait_weight
@@ -83,11 +83,11 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere = {
 	ai_weight = 20
 }
 
-leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2 = {
-	replace_traits = { "leader_trait_SNAP_Steven_Wintle_jenny_everywhere" }
+leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2 = {
+	replace_traits = { "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere" }
 	cost = 1
 	inline_script = {
-		script = "leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2"
+		script = "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
 		CLASS = scientist
 		ICON = "GFX_trait_ingenious"
 		RARITY = unique
@@ -105,7 +105,7 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2 = {
 	}
 	
 	self_modifier = {
-        set_name = leader_SNAP_Steven_Wintle_jenny_everywhere
+        set_name = leader_SNAP_Steven_Wintle_Jenny_Everywhere
 		modification = no
 		hide_age = yes
 		slave_cost = {
@@ -117,7 +117,7 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2 = {
 	triggered_self_modifier = {
 		potential = { is_councilor = no }
 		show_if_not_potential = yes
-		not_potential_override_text_key = SNAP_Steven_Wintle_jenny_everywhere_on_council
+		not_potential_override_text_key = SNAP_Steven_Wintle_Jenny_Everywhere_on_council
 		leaders_upkeep_mult = -0.10
 	}
 	councilor_modifier = {
@@ -138,12 +138,12 @@ leader_trait_SNAP_Steven_Wintle_jenny_everywhere_2 = {
 
 ### Trait conflicts
 	opposites = {
-		leader_trait_SNAP_mistereightysix_arcoiris
-		leader_trait_SNAP_mistereightysix_arcoiris_2
-		leader_trait_SNAP_codygibling_gadg8eer
-        leader_trait_SNAP_codygibling_quick_gadg8eer
-        leader_trait_SNAP_codygibling_social_gadg8eer
-        leader_trait_SNAP_codygibling_playing_gadg8eer
+		leader_trait_SNAP_MisterEightySix_ArcoIris
+		leader_trait_SNAP_MisterEightySix_ArcoIris_2
+		leader_trait_SNAP_CodyGibling_Gadg8eer
+        leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+        leader_trait_SNAP_CodyGibling_social_Gadg8eer
+        leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 	}
 	selectable_weight = {
 		weight = @class_trait_weight
