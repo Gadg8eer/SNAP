@@ -27,6 +27,8 @@
 # 3c. What I'm trying to say is, don't bullshit me about "Primagens" or other "restricted species". You have no power here, internet drama.	#
 # 4. I can only do the coding for the first 30 contributed characters in SNAP. If you wish to contribute a character after that...			#
 # 4+. ...then please create a personal fork, add your characters, and request to merge with the latest dev branch.							#
+# 5. These rules as to how this works cannot be changed if someone continues maintaining SNAP without me.									#
+# 5+. ...but you're free to create a mod designed to be used with SNAP!																		#
 #-------------------------------------------------------------------------------------------------------------------------------------------#
 # If you understand and accept the above conditions, you may proceed.
 leader_trait_snap_protected_youth = {
