@@ -469,10 +469,9 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 					}
 					OR = {
 						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-						has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer
-						#					  has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-						#					  has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-						#					  has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
 				}
 				set_name = leader_CodyGibling_Gadg8eer/ruler
