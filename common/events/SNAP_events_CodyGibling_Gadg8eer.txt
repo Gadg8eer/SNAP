@@ -6,15 +6,28 @@ event = {
 	is_triggered_only = no
 
 	immediate = {
+		limit = {
+			is_ai = no # Only human players
+		}
 		SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
 		fire_event = {
-            id = my_mod.my_delayed_event
-            days = 1
-        }
+			id = SNAP_events_CodyGibling_Gadg8eer.1
+			days = 1
+		}
 		every_country = {
 			limit = {
+				NOT = {
+					has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				}
 				exists = ruler
-				ruler = { has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer }
+				ruler = {
+					OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
 			}
 			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 			ruler = {
@@ -24,7 +37,30 @@ event = {
 	}
 }
 
+event = {
+	id = SNAP_events_CodyGibling_Gadg8eer.1
+	hide_window = yes
+	is_triggered_only = no
 
+	immediate = {
+		limit = {
+			has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			is_ai = no # Only human players
+		}
+		every_country = {
+			limit = {
+				exists = ruler
+				ruler = {
+					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+				}
+			}
+			ruler = {
+				set_
+			}
+			
+		}
+	}
+}
 
 
 				# Optionally check if the name is not what you want
@@ -35,4 +71,18 @@ event = {
 	
 
 
-SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
+
+
+
+
+
+
+limit = {
+					any_owned_leader = {
+						
+					}
+				}
+				
+				
+				
+				
