@@ -6,8 +6,27 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# Unless otherwise specified by the creator, personas/characters who are minors will not die.
+		if = {
+			limit = {
+				AND = {
+					leader_age < 18
+					OR = {
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
+			}
+			add_trait = leader_trait_snap_protected_youth
+		}
+		
 		every_country = {
-			limit = { is_ai = no } # Only human players
+			limit = {
+				# Only human players
+				is_ai = no
+			}
 			if = {
 				limit = {
 					any_owned_leader = {
@@ -43,6 +62,11 @@ event = {
 				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
 			}
 		}
+		
+		fire_event = {
+			id = SNAP_CheckOntology.1
+			days = 2
+		}
 	}
 }
 
@@ -52,8 +76,28 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
+		# Unless otherwise specified by the creator, personas/characters who are minors will not die.
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						leader_age < 18
+					}
+					OR = {
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
+			}
+			add_trait = leader_trait_snap_protected_youth
+		}
 		every_country = {
-			limit = { is_ai = no } # Only human players
+			limit = {
+				# Only human players
+				is_ai = no 
+			}
 			
 			# Check for ArcoIris
 			if = {
@@ -62,7 +106,7 @@ event = {
 						has_trait = leader_trait_SNAP_MisterEightySix_ArcoIris
 					}
 				}
-				fire_event = { id = SNAP_events_MisterEightySix_ArcoIris.0 }
+				fire_event = { id = SNAP_events_MisterEightySix_ArcoIris.2 }
 			}
 
 			# Check for Jenny Everywhere
@@ -73,7 +117,7 @@ event = {
 						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
 					}
 				}
-				fire_event = { id = SNAP_events_Steven_Wintle_Jenny_Everywhere.0 }
+				fire_event = { id = SNAP_events_Steven_Wintle_Jenny_Everywhere.2 }
 			}
 
 			# Check for Gadg8eer
@@ -88,7 +132,7 @@ event = {
 						}
 					}
 				}
-				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.2 }
 			}
 		}
 	}
