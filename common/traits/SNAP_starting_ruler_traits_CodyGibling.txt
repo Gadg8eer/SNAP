@@ -94,7 +94,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 		# Reset age to 10 on any age change
 		if = {
 			limit = {
-				has_leader_flag = event_target:Gadg8eer
+				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				OR = {
 					is_robotic = yes
 					has_trait = trait_virtual
@@ -213,7 +213,7 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
 			}
 			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 			set_global_flag = SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0
-			set_leader_flag = event_target:Gadg8eer
+			set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 		}
 	}
 	on_add = {
@@ -341,7 +341,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 			}
 			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 			set_global_flag = SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0
-			set_leader_flag = event_target:Gadg8eer
+			set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 		}
 	}
 	on_add = {
@@ -369,7 +369,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 		# Reset age to 10 on any age change
 		if = {
 			limit = {
-				has_leader_flag = event_target:Gadg8eer
+				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				OR = {
 					is_robotic = yes
 					has_trait = trait_virtual
@@ -470,7 +470,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 			self_modifier = {
 				set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 				set_global_flag = SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0
-				set_leader_flag = event_target:Gadg8eer
+				set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				set_name = leader_CodyGibling_Gadg8eer/ruler
 			}
 		}
@@ -500,7 +500,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		# Reset age to 10 on any age change
 		if = {
 			limit = {
-				has_leader_flag = event_target:Gadg8eer
+				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				OR = {
 					is_robotic = yes
 					has_trait = trait_virtual
@@ -527,7 +527,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 			is_idle = no
 		}
 		who = {
-			event_target:Gadg8eer = {
+			event_target_SNAP_CodyGibling_Gadg8eer = {
 				potential = {
 					on_single_player_save_game_load = {
 						has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
