@@ -1,0 +1,57 @@
+namespace = SNAP_CheckOntology
+
+event = {
+	id = SNAP_CheckOntology.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				AND = {
+					is_ai = no
+					exists = ruler
+				}
+				ruler = {
+					OR = {
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
+			}
+			every_leader = {
+				limit = {
+					OR = {
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = SNAP_CheckOntology.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					
+				}
+			}
+			
+		}
+	}
+}
