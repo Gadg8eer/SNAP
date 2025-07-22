@@ -1,18 +1,38 @@
-namespace = SNAP_CodyGibling_Gadg8eer
+namespace = SNAP_events_CodyGibling_Gadg8eer
 
 event = {
-    id = SNAP_CodyGibling_Gadg8eer.0
-    hide_window = yes
-    is_triggered_only = no
+	id = SNAP_events_CodyGibling_Gadg8eer.0
+	hide_window = yes
+	is_triggered_only = no
 
-    immediate = {
-        every_country = {
-            limit = {
-                exists = ruler
-                ruler = { has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer }
-            }
-            set_global_flag = SNAP_CodyGibling_Gadg8eer_taken
-            ruler = { set_leader_flag = SNAP_CodyGibling_Gadg8eer_ruler }
+	immediate = {
+		SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
+		fire_event = {
+            id = my_mod.my_delayed_event
+            days = 1
         }
-    }
+		every_country = {
+			limit = {
+				exists = ruler
+				ruler = { has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer }
+			}
+			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			ruler = {
+				set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+			}
+		}
+	}
 }
+
+
+
+
+				# Optionally check if the name is not what you want
+				# if = {
+				#	 limit = { NOT = { check_variable = { which = name value = "Cody Gibling" } } }
+				set_name = { name = "leader_CodyGibling_Gadg8eer" }
+				# }
+	
+
+
+SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
