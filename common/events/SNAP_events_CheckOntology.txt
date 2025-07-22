@@ -7,33 +7,40 @@ event = {
 
 	immediate = {
 		every_country = {
-			limit = {
-				AND = {
-					is_ai = no
-					exists = ruler
-				}
-				ruler = {
-					OR = {
-						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
-						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
-						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
-					}
-				}
-			}
-			every_leader = {
+			limit = { is_ai = no } # Only human players
+			if = {
 				limit = {
-					OR = {
-						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
-						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
-						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_MisterEightySix_ArcoIris
 					}
 				}
+				fire_event = { id = SNAP_events_MisterEightySix_ArcoIris.0 }
+			}
+
+			# Check for Jenny Everywhere
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+					}
+				}
+				fire_event = { id = SNAP_events_Steven_Wintle_Jenny_Everywhere.0 }
+			}
+
+			# Check for Gadg8eer
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+						}
+					}
+				}
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
 			}
 		}
 	}
@@ -46,12 +53,43 @@ event = {
 
 	immediate = {
 		every_country = {
-			limit = {
-				OR = {
-					
-				}
-			}
+			limit = { is_ai = no } # Only human players
 			
+			# Check for ArcoIris
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_MisterEightySix_ArcoIris
+					}
+				}
+				fire_event = { id = SNAP_events_MisterEightySix_ArcoIris.0 }
+			}
+
+			# Check for Jenny Everywhere
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+					}
+				}
+				fire_event = { id = SNAP_events_Steven_Wintle_Jenny_Everywhere.0 }
+			}
+
+			# Check for Gadg8eer
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+						}
+					}
+				}
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
+			}
 		}
 	}
 }
