@@ -5,6 +5,11 @@ on_game_start = {
 	}
 }
 
+on_daily_pulse = {
+	events = {
+		SNAP_CodyGibling_Gadg8eer.2
+	}
+}
 
 on_ruler_death = {
 	events = {
