@@ -27,6 +27,8 @@ event = {
 				# Only human players
 				is_ai = no
 			}
+			
+			# Check for ArcoIris
 			if = {
 				limit = {
 					any_owned_leader = {
