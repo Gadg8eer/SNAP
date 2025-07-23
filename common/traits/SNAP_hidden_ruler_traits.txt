@@ -39,4 +39,10 @@ leader_trait_snap_protected_youth = {
 		leader_age = -10000  # Makes leader effectively immortal
 	}
 	hidden = yes
+	
+	on_age_change = {
+		if = {
+		limit = { leader_age >= 18 }
+		remove_trait = leader_trait_snap_protected_youth
+	}
 }
