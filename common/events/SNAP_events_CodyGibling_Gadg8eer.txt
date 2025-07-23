@@ -331,14 +331,16 @@ event = {
 				who = {
 					event_target_SNAP_CodyGibling_Gadg8eer = {
 						has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
-						AND = {
-							leader_age = 86
-							is_immortal = yes
-						}
 						OR = {
-							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							AND = {
+								leader_age = 86
+								is_immortal = yes
+							}
+							OR = {
+								has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+								has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+								has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							}
 						}
 					}
 				}
@@ -347,7 +349,7 @@ event = {
 				who = {
 					event_target_SNAP_CodyGibling_Gadg8eer = {
 						set_immortal = no
-						remove_trait = 
+						remove_trait = leader_trait_snap_protected_youth
 					}
 				}
 			}
