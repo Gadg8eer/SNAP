@@ -93,7 +93,7 @@ event = {
 				}
 				fire_event = {
 					id = SNAP_events_CodyGibling_Gadg8eer.9
-					days = 248
+					days = 249
 				}
 			}
 		}
