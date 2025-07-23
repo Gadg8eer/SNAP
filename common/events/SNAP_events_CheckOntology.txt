@@ -80,15 +80,15 @@ event = {
 		if = {
 			limit = {
 				AND = {
-					NOT = {
-						leader_age < 18
-					}
-					OR = {
-						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
-					}
+					# Only human players
+					is_ai = no 
+				}
+				NOT = {
+					is_immortal = yes
+					leader_age >= 18
+				}
+				OR = {	
+					has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 				}
 			}
 			add_trait = leader_trait_snap_protected_youth
