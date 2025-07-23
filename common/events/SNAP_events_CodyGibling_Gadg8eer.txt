@@ -93,7 +93,7 @@ event = {
 				}
 				fire_event = {
 					id = SNAP_events_CodyGibling_Gadg8eer.9
-					days = 249
+					days = 609
 				}
 			}
 		}
@@ -248,6 +248,7 @@ event = {
 	}
 }
 
+# Tick-tock...
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.4
 	hide_window = yes
@@ -286,6 +287,7 @@ event = {
 	}
 }
 
+# GAME OVER, YEAAAAAAAAH! *rock music*
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.5
 	hide_window = yes
@@ -335,6 +337,14 @@ event = {
 							AND = {
 								leader_age = 86
 								is_immortal = yes
+								NOR = {
+									has_trait = trait_robot
+									has_trait = trait_robot_immortality
+									has_trait = trait_mechanical
+									has_trait = trait_synthetic
+									has_trait = trait_psionic
+									has_trait = leader_trait_chosen
+								}
 							}
 							OR = {
 								has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
@@ -349,7 +359,6 @@ event = {
 				who = {
 					event_target_SNAP_CodyGibling_Gadg8eer = {
 						set_immortal = no
-						remove_trait = leader_trait_snap_protected_youth
 					}
 				}
 			}
@@ -357,6 +366,7 @@ event = {
 	}
 }
 
+# August 9th, year 2
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.9
 	hide_window = yes
