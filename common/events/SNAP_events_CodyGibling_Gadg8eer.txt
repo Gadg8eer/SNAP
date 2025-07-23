@@ -11,10 +11,6 @@ event = {
 			is_ai = no # Only human players
 		}
 		SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
-		fire_event = {
-			id = SNAP_events_CodyGibling_Gadg8eer.1
-			days = 1
-		}
 		every_country = {
 			limit = {
 				NOT = {
@@ -26,7 +22,86 @@ event = {
 							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
+				}
+			}
+			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			if = {
+				limit = {
+					OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+					}
+				}
+				immediately = {
+					ruler = {
+						set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+						# Force age to 8 until a later date
+						set_age = 8
+						# Optionally check if the name is not what you want
+						if = {
+							limit = {
+								NOT = {
+									check_variable = {
+										which = name value = "Gadg8eer"
+									}
+								}
+							}
+							set_name = {
+								name = "leader_CodyGibling_Gadg8eer"
+							}
+						}
+					}
+				}
+				fire_event = {
+					id = SNAP_events_CodyGibling_Gadg8eer.1
+					days = 1
+				}
+			} else_if = {
+				limit = {
+					has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+				}
+				immediately = {
+					ruler = {
+						set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+						# Force age to 10
+						set_age = 10
+						# Optionally check if the name is not what you want
+						if = {
+							limit = {
+								NOT = {
+									check_variable = {
+										which = name value = "Gadg8eer"
+									}
+								}
+							}
+							set_name = {
+								name = "leader_CodyGibling_Gadg8eer"
+							}
+						}
+					}
+					
+				}
+			}
+		}
+		limit = {
+			is_ai = no # Only human players
+		}
+		SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
+		fire_event = {
+			id = SNAP_events_CodyGibling_Gadg8eer.1
+			days = 1
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+				}
+				exists = ruler
+				ruler = {
+					has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 				}
 			}
 			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
