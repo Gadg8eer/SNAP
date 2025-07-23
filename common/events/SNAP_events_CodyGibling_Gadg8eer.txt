@@ -340,6 +340,7 @@ event = {
 								NOR = {
 									has_trait = trait_robot
 									has_trait = trait_robot_immortality
+									has_trait = trait_robot_synthetic_dawn
 									has_trait = trait_mechanical
 									has_trait = trait_synthetic
 									has_trait = trait_psionic
