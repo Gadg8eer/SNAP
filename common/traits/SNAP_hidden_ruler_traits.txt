@@ -42,7 +42,9 @@ leader_trait_snap_protected_youth = {
 	
 	on_age_change = {
 		if = {
-		limit = { leader_age >= 18 }
+			limit = {
+				leader_age >= 18
+			}
 		remove_trait = leader_trait_snap_protected_youth
 	}
 }
