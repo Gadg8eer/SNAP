@@ -7,13 +7,13 @@ on_game_start = {
 
 on_ruler_death = {
 	events = {
-		SNAP_CodyGibling_Gadg8eer.4
+		SNAP_CodyGibling_Gadg8eer.5
 	}
 }
 
 on_daily_pulse = {
 	events = {
-		SNAP_CodyGibling_Gadg8eer.5 # The one that has to earn immortality.
-		SNAP_CodyGibling_Gadg8eer.8 # The one who... tries to repay his people for granting him immortality?
+		SNAP_CodyGibling_Gadg8eer.4 # The one that has to earn immortality.
+		SNAP_CodyGibling_Gadg8eer.10 # The one who... tries to repay his people for granting him immortality? plz don't hate me! ¡_¡
 	}
 }
