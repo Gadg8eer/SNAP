@@ -1,6 +1,6 @@
 # This file is part of the Stellaris Novelty Avatar Portraits (SNAP) mod for Stellaris. Avatar as in "a persona" or "a VR metaverse avatar", not the Na'vi clones in the James Cameron movies (nor anything to do with the Nickelodeon animated series "The Last Airbender" either for that matter). It basically makes anything you can depict lore-friendly by implying that anything impossible is exclusive to a simulated "metaverse".
 #-------------------------------------------------------------------------------------------------------------------------------------------#
-# The character portraits provided by this file are used under a license or with the permission of the character's creator.
+# The character portraits provided by this mod are used under a license or with the permission of the character's creator.
 # Please read the code comments (the "# Stuff gets described in text." thingies just below this) to understand what is and isn't legally okay to do with this artist's works. Thank you.
 #-------------------------------------------------------------------------------------------------------------------------------------------#
 # Jenny Everywhere © Steven Wintle. All Rights reserved.
