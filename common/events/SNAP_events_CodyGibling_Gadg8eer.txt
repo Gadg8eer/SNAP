@@ -26,7 +26,6 @@ event = {
 							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
 				}
 			}
