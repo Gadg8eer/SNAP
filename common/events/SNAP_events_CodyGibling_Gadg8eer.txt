@@ -72,7 +72,7 @@ event = {
 			limit = {
 				has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 			}
-			immediately = {
+			immediate = {
 				ruler = {
 					set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 					# Force age to 8 until a later date
