@@ -6,4 +6,6 @@ tags={
 }
 
 name="Stellaris Novelty Avatar Portraits"
+picture="thumbnail.png"
 supported_version="4.0.21"
+path="M:\Mod Workshop\Stellaris\mod_workshop\SNAP"
