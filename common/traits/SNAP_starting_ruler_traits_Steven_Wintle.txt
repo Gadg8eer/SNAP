@@ -15,16 +15,16 @@ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere = {
 	cost = 1
 	inline_script = {
 		script = "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
-		CLASS = scientist
+		CLASS = leader
 		ICON = "GFX_trait_clone_soldier"
-		RARITY = common
+		RARITY = always
 		COUNCIL = yes
 		TIER = 1
 	}
 	leader_potential_add {
 		gender = female
 		leader_class = { ruler scientist }
-		is_councilor = no
+	#	is_councilor = no
 		NOT = {
             from = {
                 has_ethic = "ethic_gestalt_consciousness"
@@ -124,7 +124,7 @@ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2 = {
 		# increased chance to discover rare techs (weighted in tech-script)
 		species_leader_exp_gain = 0.10
 		# Gadg8eer: "Decrease the archaeology failure rate of Jenny's empire to absolutely none, but do not show this to player..."
-		# Also Gadg8eer but evil: "Re-Increase the archaeology failure rate of Jenny's empire to half of default value if you upgrade her trait (for balance), but do not show this to player! >:D"
+		# Also Gadg8eer but evil: "Re-Increase the archaeology failure rate of Jenny's empire to half of default value if you upgrade her trait (for balance), but do not show this to player! >:^D"
 		hidden_effect = {
 			ship_anomaly_fail_risk = -50
 		}
