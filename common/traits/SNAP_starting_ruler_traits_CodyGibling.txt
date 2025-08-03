@@ -384,7 +384,9 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 					has_ethic = "ethic_fanatic_materialist"
 				}
 			}
-			has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			AND = {
+				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			}
 		}
 	}
 	opposites = {
@@ -457,34 +459,6 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 			set_age = 10
 			# Affirm immortality
 			immortal_leaders = yes
-		}
-	}
-	### Sorry, but you don't get to rename me!
-	triggered_self_modifier = {
-		pre_triggers = {
-			# only if the leader exists and is alive
-			has_owner = yes
-			# except if the leader is idle
-			is_idle = no
-		}
-		who = {
-			event_target_SNAP_CodyGibling_Gadg8eer = {
-				potential = {
-					on_single_player_save_game_load = {
-						has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-					}
-					OR = {
-						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
-					}
-				}
-				set_name = leader_CodyGibling_Gadg8eer/ruler
-				change_leader_portrait = SNAP_portraits_CodyGibling_Gadg8eer
-				# EVENT WINDOW TO TELL YOU THAT CAN'T RENAME THIS CHARACTER!
-				set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-			}
 		}
 	}
 	### Tooltip
