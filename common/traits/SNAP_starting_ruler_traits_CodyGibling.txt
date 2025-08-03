@@ -19,7 +19,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 		script = trait/icon_mechanical
 		CLASS = leader
 		ICON = "GFX_trait_mechanical"
-		RARITY = common
+		RARITY = always
 		COUNCIL = triggered
 		TIER = 1
 	}
@@ -95,13 +95,15 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 		if = {
 			limit = {
 				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
-				OR = {
-					is_robotic = yes
-					has_trait = trait_virtual
-					has_trait = trait_conceptoid
-				}
-				NOT = {
-					age = 10
+				AND = {
+					OR = {
+						is_robotic = yes
+						has_trait = trait_virtual
+						has_trait = trait_conceptoid
+					}
+					NOT = {
+						age = 10
+					}
 				}
 			}
 			# Force custom portrait
@@ -248,7 +250,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 		script = trait/icon_mechanical
 		CLASS = scientist
 		ICON = "GFX_trait_mechanical"
-		RARITY = common
+		RARITY = rare
 		COUNCIL = triggered
 		TIER = 2
 	}
@@ -278,7 +280,9 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 					has_ethic = "ethic_fanatic_materialist"
 				}
 			}
-			has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			AND = {
+				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			}
 		}
 	}
 	opposites = {
@@ -355,9 +359,9 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 	inline_script = {
 		script = trait/icon_mechanical
-		CLASS = scientist
+		CLASS = leader
 		ICON = "GFX_trait_mechanical"
-		RARITY = unique
+		RARITY = always
 		COUNCIL = triggered
 		TIER = none
 	}
@@ -414,15 +418,13 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		# If virtual, conceptual or robotic, force age to 10 if not already
 		if = {
 			limit = {
-				AND = {
-					OR = {
-						is_robotic = yes
-						has_trait = trait_virtual
-						has_trait = trait_conceptoid
-					}
-					NOT = {
-						age = 10
-					}
+				OR = {
+					is_robotic = yes
+					has_trait = trait_virtual
+					has_trait = trait_conceptoid
+				}
+				NOT = {
+					age = 10
 				}
 			}
 			# Force custom portrait
