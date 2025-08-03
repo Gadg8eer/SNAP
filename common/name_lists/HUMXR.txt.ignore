@@ -1,4 +1,4 @@
-
+﻿
 HUMXR = {
 	category = "Humanoid"
 	randomized = no
@@ -132,282 +132,27 @@ HUMXR = {
 		cruiser = {
 			# HUMXR_CLASS_Literature
 			HUMXR_CLASS_Literature1
-			HUMXR_CLASS_Literature2
-			HUMXR_CLASS_Literature3
-			HUMXR_CLASS_Literature4
-			HUMXR_CLASS_Literature5
-			HUMXR_CLASS_Literature6
-			HUMXR_CLASS_Literature7
-			HUMXR_CLASS_Literature8
-			HUMXR_CLASS_Literature9
-			HUMXR_CLASS_Literature10
-			HUMXR_CLASS_Literature11
-			HUMXR_CLASS_Literature12
-			HUMXR_CLASS_Literature13
-			HUMXR_CLASS_Literature14
-			HUMXR_CLASS_Literature15
-			HUMXR_CLASS_Literature16
-			HUMXR_CLASS_Literature17
-			HUMXR_CLASS_Literature18
-			HUMXR_CLASS_Literature19
-			HUMXR_CLASS_Literature20
-			HUMXR_CLASS_Literature21
-			HUMXR_CLASS_Literature22
-			HUMXR_CLASS_Literature23
-			HUMXR_CLASS_Literature24
-			HUMXR_CLASS_Literature25
-			HUMXR_CLASS_Literature26
-			HUMXR_CLASS_Literature27
-			HUMXR_CLASS_Literature28
-			HUMXR_CLASS_Literature29
-			HUMXR_CLASS_Literature30
-			HUMXR_CLASS_Literature31
-			HUMXR_CLASS_Literature32
-			HUMXR_CLASS_Literature33
-			HUMXR_CLASS_Literature34
-			HUMXR_CLASS_Literature35
-			HUMXR_CLASS_Literature36
-			HUMXR_CLASS_Literature37
-			HUMXR_CLASS_Literature38
-			HUMXR_CLASS_Literature39
-			HUMXR_CLASS_Literature40
-			HUMXR_CLASS_Literature41
-			HUMXR_CLASS_Literature42
-			HUMXR_CLASS_Literature43
-			HUMXR_CLASS_Literature44
-			HUMXR_CLASS_Literature45
-			HUMXR_CLASS_Literature46
-			HUMXR_CLASS_Literature47
-			HUMXR_CLASS_Literature48
-			HUMXR_CLASS_Literature49
-			HUMXR_CLASS_Literature50
-			HUMXR_CLASS_Literature51
-			HUMXR_CLASS_Literature52
 		}
-        
+
 		battleship = {
-            # HUMXR_CLASS_TabletopGame
+			# HUMXR_CLASS_TabletopGame
 			HUMXR_CLASS_TabletopGame1
-			HUMXR_CLASS_TabletopGame2
-			HUMXR_CLASS_TabletopGame3
-			HUMXR_CLASS_TabletopGame4
-			HUMXR_CLASS_TabletopGame5
-			HUMXR_CLASS_TabletopGame6
-			HUMXR_CLASS_TabletopGame7
-			HUMXR_CLASS_TabletopGame8
-			HUMXR_CLASS_TabletopGame9
-			HUMXR_CLASS_TabletopGame10
-			HUMXR_CLASS_TabletopGame11
-			HUMXR_CLASS_TabletopGame12
-			HUMXR_CLASS_TabletopGame13
-			HUMXR_CLASS_TabletopGame14
-			HUMXR_CLASS_TabletopGame15
-			HUMXR_CLASS_TabletopGame16
-			HUMXR_CLASS_TabletopGame17
-			HUMXR_CLASS_TabletopGame18
-			HUMXR_CLASS_TabletopGame19
-			HUMXR_CLASS_TabletopGame20
-			HUMXR_CLASS_TabletopGame21
-			HUMXR_CLASS_TabletopGame22
-			HUMXR_CLASS_TabletopGame23
-			HUMXR_CLASS_TabletopGame24
-			HUMXR_CLASS_TabletopGame25
-			HUMXR_CLASS_TabletopGame26
-			HUMXR_CLASS_TabletopGame27
-			HUMXR_CLASS_TabletopGame28
-			HUMXR_CLASS_TabletopGame29
-			HUMXR_CLASS_TabletopGame30
-			HUMXR_CLASS_TabletopGame31
-			HUMXR_CLASS_TabletopGame32
-			HUMXR_CLASS_TabletopGame33
-			HUMXR_CLASS_TabletopGame34
-			HUMXR_CLASS_TabletopGame35
-			HUMXR_CLASS_TabletopGame36
-			HUMXR_CLASS_TabletopGame37
-			HUMXR_CLASS_TabletopGame38
-			HUMXR_CLASS_TabletopGame39
-			HUMXR_CLASS_TabletopGame40
-			HUMXR_CLASS_TabletopGame41
-			HUMXR_CLASS_TabletopGame42
-			HUMXR_CLASS_TabletopGame43
-			HUMXR_CLASS_TabletopGame44
-			HUMXR_CLASS_TabletopGame45
-			HUMXR_CLASS_TabletopGame46
-			HUMXR_CLASS_TabletopGame47
-			HUMXR_CLASS_TabletopGame48
-			HUMXR_CLASS_TabletopGame49
-			HUMXR_CLASS_TabletopGame50
-			HUMXR_CLASS_TabletopGame51
-			HUMXR_CLASS_TabletopGame52
-}
+		}
 
 		titan = {
-            # HUMXR_CLASS_Radio
+			# HUMXR_CLASS_Radio
 			HUMXR_CLASS_Radio1
-			HUMXR_CLASS_Radio2
-			HUMXR_CLASS_Radio3
-			HUMXR_CLASS_Radio4
-			HUMXR_CLASS_Radio5
-			HUMXR_CLASS_Radio6
-			HUMXR_CLASS_Radio7
-			HUMXR_CLASS_Radio8
-			HUMXR_CLASS_Radio9
-			HUMXR_CLASS_Radio10
-			HUMXR_CLASS_Radio11
-			HUMXR_CLASS_Radio12
-			HUMXR_CLASS_Radio13
-			HUMXR_CLASS_Radio14
-			HUMXR_CLASS_Radio15
-			HUMXR_CLASS_Radio16
-			HUMXR_CLASS_Radio17
-			HUMXR_CLASS_Radio18
-			HUMXR_CLASS_Radio19
-			HUMXR_CLASS_Radio20
-			HUMXR_CLASS_Radio21
-			HUMXR_CLASS_Radio22
-			HUMXR_CLASS_Radio23
-			HUMXR_CLASS_Radio24
-			HUMXR_CLASS_Radio25
-			HUMXR_CLASS_Radio26
-			HUMXR_CLASS_Radio27
-			HUMXR_CLASS_Radio28
-			HUMXR_CLASS_Radio29
-			HUMXR_CLASS_Radio30
-			HUMXR_CLASS_Radio31
-			HUMXR_CLASS_Radio32
-			HUMXR_CLASS_Radio33
-			HUMXR_CLASS_Radio34
-			HUMXR_CLASS_Radio35
-			HUMXR_CLASS_Radio36
-			HUMXR_CLASS_Radio37
-			HUMXR_CLASS_Radio38
-			HUMXR_CLASS_Radio39
-			HUMXR_CLASS_Radio40
-			HUMXR_CLASS_Radio41
-			HUMXR_CLASS_Radio42
-			HUMXR_CLASS_Radio43
-			HUMXR_CLASS_Radio44
-			HUMXR_CLASS_Radio45
-			HUMXR_CLASS_Radio46
-			HUMXR_CLASS_Radio47
-			HUMXR_CLASS_Radio48
-			HUMXR_CLASS_Radio49
-			HUMXR_CLASS_Radio50
-			HUMXR_CLASS_Radio51
-			HUMXR_CLASS_Radio52
-}
+		}
 
 		colossus = {
-            # HUMXR_CLASS_Television
+			# HUMXR_CLASS_Television
 			HUMXR_CLASS_Television1
-			HUMXR_CLASS_Television2
-			HUMXR_CLASS_Television3
-			HUMXR_CLASS_Television4
-			HUMXR_CLASS_Television5
-			HUMXR_CLASS_Television6
-			HUMXR_CLASS_Television7
-			HUMXR_CLASS_Television8
-			HUMXR_CLASS_Television9
-			HUMXR_CLASS_Television10
-			HUMXR_CLASS_Television11
-			HUMXR_CLASS_Television12
-			HUMXR_CLASS_Television13
-			HUMXR_CLASS_Television14
-			HUMXR_CLASS_Television15
-			HUMXR_CLASS_Television16
-			HUMXR_CLASS_Television17
-			HUMXR_CLASS_Television18
-			HUMXR_CLASS_Television19
-			HUMXR_CLASS_Television20
-			HUMXR_CLASS_Television21
-			HUMXR_CLASS_Television22
-			HUMXR_CLASS_Television23
-			HUMXR_CLASS_Television24
-			HUMXR_CLASS_Television25
-			HUMXR_CLASS_Television26
-			HUMXR_CLASS_Television27
-			HUMXR_CLASS_Television28
-			HUMXR_CLASS_Television29
-			HUMXR_CLASS_Television30
-			HUMXR_CLASS_Television31
-			HUMXR_CLASS_Television32
-			HUMXR_CLASS_Television33
-			HUMXR_CLASS_Television34
-			HUMXR_CLASS_Television35
-			HUMXR_CLASS_Television36
-			HUMXR_CLASS_Television37
-			HUMXR_CLASS_Television38
-			HUMXR_CLASS_Television39
-			HUMXR_CLASS_Television40
-			HUMXR_CLASS_Television41
-			HUMXR_CLASS_Television42
-			HUMXR_CLASS_Television43
-			HUMXR_CLASS_Television44
-			HUMXR_CLASS_Television45
-			HUMXR_CLASS_Television46
-			HUMXR_CLASS_Television47
-			HUMXR_CLASS_Television48
-			HUMXR_CLASS_Television49
-			HUMXR_CLASS_Television50
-			HUMXR_CLASS_Television51
-			HUMXR_CLASS_Television52
-        }
+		}
 
 		juggernaut = {
-            # HUMXR_CLASS_VideoGame
+			# HUMXR_CLASS_VideoGame
 			HUMXR_CLASS_VideoGame1
-			HUMXR_CLASS_VideoGame2
-			HUMXR_CLASS_VideoGame3
-			HUMXR_CLASS_VideoGame4
-			HUMXR_CLASS_VideoGame5
-			HUMXR_CLASS_VideoGame6
-			HUMXR_CLASS_VideoGame7
-			HUMXR_CLASS_VideoGame8
-			HUMXR_CLASS_VideoGame9
-			HUMXR_CLASS_VideoGame10
-			HUMXR_CLASS_VideoGame11
-			HUMXR_CLASS_VideoGame12
-			HUMXR_CLASS_VideoGame13
-			HUMXR_CLASS_VideoGame14
-			HUMXR_CLASS_VideoGame15
-			HUMXR_CLASS_VideoGame16
-			HUMXR_CLASS_VideoGame17
-			HUMXR_CLASS_VideoGame18
-			HUMXR_CLASS_VideoGame19
-			HUMXR_CLASS_VideoGame20
-			HUMXR_CLASS_VideoGame21
-			HUMXR_CLASS_VideoGame22
-			HUMXR_CLASS_VideoGame23
-			HUMXR_CLASS_VideoGame24
-			HUMXR_CLASS_VideoGame25
-			HUMXR_CLASS_VideoGame26
-			HUMXR_CLASS_VideoGame27
-			HUMXR_CLASS_VideoGame28
-			HUMXR_CLASS_VideoGame29
-			HUMXR_CLASS_VideoGame30
-			HUMXR_CLASS_VideoGame31
-			HUMXR_CLASS_VideoGame32
-			HUMXR_CLASS_VideoGame33
-			HUMXR_CLASS_VideoGame34
-			HUMXR_CLASS_VideoGame35
-			HUMXR_CLASS_VideoGame36
-			HUMXR_CLASS_VideoGame37
-			HUMXR_CLASS_VideoGame38
-			HUMXR_CLASS_VideoGame39
-			HUMXR_CLASS_VideoGame40
-			HUMXR_CLASS_VideoGame41
-			HUMXR_CLASS_VideoGame42
-			HUMXR_CLASS_VideoGame43
-			HUMXR_CLASS_VideoGame44
-			HUMXR_CLASS_VideoGame45
-			HUMXR_CLASS_VideoGame46
-			HUMXR_CLASS_VideoGame47
-			HUMXR_CLASS_VideoGame48
-			HUMXR_CLASS_VideoGame49
-			HUMXR_CLASS_VideoGame50
-			HUMXR_CLASS_VideoGame51
-			HUMXR_CLASS_VideoGame52
-        }
+		}
 
 		science = {
 			# HUMXR_CLASS_Pioneer
@@ -461,7 +206,7 @@ HUMXR = {
 		}
 
 		machine_assault_3 = {
-			# Robots, WALL-E, 3BELOW, Next-Gen, The Mitchells vs. the Machines, Ron's Gone Wrong
+			# Robots, WALL-E, 3BELOW, Next-Gen, The Mitchels vs. the Machines, Ron's Gone Wrong
 			sequential_name = HUMXR_CGIRobots
 		}
 
@@ -474,7 +219,7 @@ HUMXR = {
 		}
 
 		slave_army = {
-			sequential_name = HUMXR_BlaxploitationBuddyCops
+			sequential_name = HUMXR_BlaxplotationBuddyCops
 		}
 
 		clone_army = {
@@ -570,7 +315,7 @@ HUMXR = {
 
 		pc_savannah = {
 			names = {
-				HUMXR_PLANET_SavannahPrairiesCities
+				HUMXR_PLANET_SavannahPrariesCities
 			}
 		}
 
@@ -667,7 +412,7 @@ HUMXR = {
 			full_names = {
 			# Defaults
 				HUMXR_PROTAG_Steven_Wintle_F
-				HUMXR_PROTAG_SuggsMy****sLionel_M # Yes, this is intentionally censored
+				HUMXR_PROTAG_SuggsMy****sLionel_M
 				
 			# Cody Gibling
 				HUMXR_PROTAG_Cody_Gibling_F

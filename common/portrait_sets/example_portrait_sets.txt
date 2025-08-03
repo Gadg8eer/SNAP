@@ -1,7 +1,0 @@
-example_set = {
-	species_class = EXAMPLE
-
-	portraits = {
-		"example"
-	}
-}

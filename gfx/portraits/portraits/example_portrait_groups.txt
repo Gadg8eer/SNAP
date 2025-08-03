@@ -1,6 +1,6 @@
 portrait_groups = {
 	example = {
-		default = example_red
+		default = example_green
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
 				portraits = {

@@ -1,0 +1,140 @@
+namespace = SNAP_CheckOntology
+
+event = {
+	id = SNAP_CheckOntology.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Unless otherwise specified by the creator, personas/characters who are minors will not die.
+		if = {
+			limit = {
+				AND = {
+					leader_age < 18
+					OR = {
+						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+					}
+				}
+			}
+			add_trait = leader_trait_snap_protected_youth
+		}
+		
+		every_country = {
+			limit = {
+				# Only human players
+				is_ai = no
+			}
+			
+			# Check for ArcoIris
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_MisterEightySix_ArcoIris
+					}
+				}
+				fire_event = { id = SNAP_events_MisterEightySix_ArcoIris.0 }
+			}
+
+			# Check for Jenny Everywhere
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+					}
+				}
+				fire_event = { id = SNAP_events_Steven_Wintle_Jenny_Everywhere.0 }
+			}
+
+			# Check for Gadg8eer
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+						}
+					}
+				}
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
+			}
+		}
+		
+		fire_event = {
+			id = SNAP_CheckOntology.1
+			days = 2
+		}
+	}
+}
+
+event = {
+	id = SNAP_CheckOntology.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Unless otherwise specified by the creator, personas/characters who are minors will not die.
+		if = {
+			limit = {
+				AND = {
+					# Only human players
+					is_ai = no 
+				}
+				NOT = {
+					is_immortal = yes
+					leader_age >= 18
+				}
+				OR = {	
+					has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+				}
+			}
+			add_trait = leader_trait_snap_protected_youth
+		}
+		every_country = {
+			limit = {
+				# Only human players
+				is_ai = no 
+			}
+			
+			# Check for ArcoIris
+			if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_MisterEightySix_ArcoIris
+					}
+				}
+				fire_event = { id = SNAP_events_MisterEightySix_ArcoIris.2 }
+			}
+
+			# Check for Jenny Everywhere
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+						has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+					}
+				}
+				fire_event = { id = SNAP_events_Steven_Wintle_Jenny_Everywhere.2 }
+			}
+
+			# Check for Gadg8eer
+			else_if = {
+				limit = {
+					any_owned_leader = {
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+						}
+					}
+				}
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.2 }
+			}
+		}
+	}
+}

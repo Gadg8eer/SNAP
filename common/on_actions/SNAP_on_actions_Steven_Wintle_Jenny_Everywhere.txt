@@ -1,0 +1,31 @@
+# This file is part of the Stellaris Novelty Avatar Portraits (SNAP) mod for Stellaris. Avatar as in "a persona" or "a VR metaverse avatar", not the Na'vi clones in the James Cameron movies (nor anything to do with the Nickelodeon animated series "The Last Airbender" either for that matter). It basically makes anything you can depict lore-friendly by implying that anything impossible is exclusive to a simulated "metaverse".
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# The character portraits provided by this mod are used under a license or with the permission of the character's creator.
+# Please read the code comments (the "# Stuff gets described in text." thingies just below this) to understand what is and isn't legally okay to do with this artist's works. Thank you.
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# Jenny Everywhere © Steven Wintle. All Rights reserved.
+# The character of Jenny Everywhere is available for use by anyone, with only one condition. This paragraph must be included in any publication involving Jenny Everywhere, in order that others may use this property as they wish. All rights reversed.
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+#Jenny Everywhere
+#- (Open Source License; Jenny Everywhere is an open source fictional character originally created by Steven Wintle. Derivatives must include the paragraph on line 7 of this document as it is the full description of the license.) -#
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# If you understand and accept the above conditions, you may proceed.
+
+### At the beginning of play, save the character (Jenny Everywhere) as an event target, and give global flags to prevent other players from using the same character.
+on_game_start = {
+	events = {
+		SNAP_Steven_Wintle_Jenny_Everywhere.0
+	}
+}
+
+# on_daily_pulse = {
+#	events = {
+#		
+#	}
+#}
+
+on_ruler_death = {
+	events = {
+		SNAP_Steven_Wintle_Jenny_Everywhere.4 # When a Multiversal Constant dies in a universe, negative space wedgies tend to occur.
+	}
+}

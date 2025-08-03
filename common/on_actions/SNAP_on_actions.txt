@@ -1,0 +1,12 @@
+### At the beginning of play, save the rulers of the human players as an event target, and give global flags to prevent other players from using the same character.
+on_game_start = {
+	events = {
+		SNAP_CheckOntology.0
+	}
+}
+
+on_daily_pulse = {
+	events = {
+		SNAP_CheckOntology.1
+	}
+}

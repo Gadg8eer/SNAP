@@ -5,5 +5,7 @@ tags={
 	"Graphics"
 }
 
-name="URSIP, or, Uploadables: Residual Self-Image Portraits"
-supported_version="3.14.1"
+name="Stellaris Novelty Avatar Portraits"
+picture="thumbnail.png"
+supported_version="4.0.21"
+path="M:\Mod_Workshop\Stellaris\mod_workshop\SNAP"

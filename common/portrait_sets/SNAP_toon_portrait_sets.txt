@@ -1,0 +1,75 @@
+#example_set = {
+#	species_class = EXAMPLE
+#
+#	portraits = {
+#		"example"
+#	}
+#}
+
+
+toon_set = {
+    species_class = SYNTH
+
+    conditional_portraits = {
+        randomizable = {
+            AND = {
+                host_has_dlc = "Synthetic Dawn"
+                host_has_dlc = "The Machine Age"
+            }
+        }
+        playable = {
+            AND = {
+                local_has_dlc = "Synthetic Dawn"
+                local_has_dlc = "The Machine Age"
+            }
+        }
+        portraits = {
+		    "example"
+            "toon"
+            "oneiroid"
+            "comet"
+            "suprema"
+            "wisp"
+            "eyes"
+            "plant"
+            "balance"
+            "plaguebug"
+            "humanoid_hp_16"
+            "humanconcept"
+        }
+    }
+
+    conditional_portraits = {
+        randomizable = no
+        playable = no
+        portraits = {
+            "TOON_Steven_Wintle_Jenny_Everywhere"
+            "TOON_CodyGibling_Gadg8eer"
+        }
+    }
+    non_pre_ftl_portraits = {
+        randomizable = {
+            AND = {
+                OR = {
+                    host_has_dlc = "Humanoids Species Pack"
+                }
+                pop_has_trait = trait_virtual
+                OR = {
+                    # Must be female to be a Jenny Everywhere.
+                    # Not excluding transgender, just not aware of how to program that yet.
+                    gender = female
+                    # If either gender can be leader, or the gender is determined at random, for this species, Jenny can also result from any species with no set gender being uploaded.
+                    species_gender = indeterminable
+                    species_gender = not_set
+                    # 
+                    # has_tradition = 
+                }
+            }
+        }
+        playable = no
+        portraits = {
+            "SYNTH_Steven_Wintle_Jenny_Everywhere"
+##        #    "HUM_CodyGibling_Gadg8eer"
+        }
+    }
+}

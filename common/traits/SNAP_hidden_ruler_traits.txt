@@ -1,0 +1,50 @@
+# This file is part of the Stellaris Novelty Avatar Portraits (SNAP) mod for Stellaris. Avatar as in "a persona" or "a VR metaverse avatar", not the Na'vi clones in the James Cameron movies (nor anything to do with the Nickelodeon animated series "The Last Airbender" either for that matter). It basically makes anything you can depict lore-friendly by implying that anything impossible is exclusive to a simulated "metaverse".
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# The character portraits provided by this mod are used under a license or with the permission of the character's creator.
+# Please read the code comments (the "# Stuff gets described in text." thingies just below this) to understand what is and isn't legally okay to do with this artist's works. Thank you.
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# SNAP 🅮 Gadg8eer, meaning it is public domain in respect to its' source code.																#
+# You may use this file and any other non-image file in SNAP at will. However...															#
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# The characters in SNAP, as fictional characters, are licensed according to the creator's wishes at the time of first implementation.		#
+# The images of characters used in SNAP are licensed according to the creator's wishes at the time of first implementation.					#
+# Artists can NOT revoke a license once released, for any reason, BUT they DO have the right to define those initial terms and conditions.  #
+# Please respect said terms and conditions. They will be on a per-character basis.															#
+# This means the license may only allow certain usage of the work, or require the work be open source, or outright ban re-use elsewhere.	#
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# SNAP is obviously an opt-in project, even if opting out afterwords is a no-go.															#
+# Imposters who try and force anything in will be disappointed: This rule does not apply if I am given proof that the image was stolen.		#
+# Aside from that, it works like this:																										#
+# Original characters (you must be the author and the work must be original) are accepted. Stellaris fan characters are also acccepted.		#
+# 1. Define the terms that must be followed by third-parties in using art of the character (including declaring no use is allowed at all).	#
+# 1a. If you're clueless and it's an Original Character, just look up Creative Commons on Wikipedia, and pick one.							#
+# 1b. When in doubt, try "CC BY-ND". If it's a Stellaris-specific fan character, slap a "Fair use only" on it.								#
+# 2. Define what you would like the character to have as actual traits.																		#
+# 2a. Note that I can only work with the game engine. If I say it's not actually possible, go bug Paradox Interactive and get back to me.	#
+# 3. There is no legal protection for "copyrighted" species, as there are for characters; Technically, the concept of a Pikachu is PD.		#
+# 3a. In practice, one cannot simply copy Pokemon and get away with it, but that is because Pokemon gameplay is patented.					#
+# 3b. Also, because other concepts such as Red (the character) or Pokeballs (the aesthetic of one) are copyrighted, including Ash's Pikachu.#
+# 3c. What I'm trying to say is, don't bullshit me about "Primagens" or other "restricted species". You have no power here, internet drama.	#
+# 4. I can only do the coding for the first 30 contributed characters in SNAP. If you wish to contribute a character after that...			#
+# 4+. ...then please create a personal fork, add your characters, and request to merge with the latest dev branch.							#
+# 5. These rules as to how this works cannot be changed if someone continues maintaining SNAP without me.									#
+# 5+. ...but you're free to create a mod designed to be used with SNAP!																		#
+#-------------------------------------------------------------------------------------------------------------------------------------------#
+# If you understand and accept the above conditions, you may proceed.
+leader_trait_snap_protected_youth = {
+	icon = "gfx/interface/icons/traits/leader_trait_youth.dds"  # Use a hidden/invisible icon or none
+	initial = no
+	leader_class = ruler
+	modifier = {
+		leader_age = -10000  # Makes leader effectively immortal
+	}
+	hidden = yes
+	
+	on_age_change = {
+		if = {
+			limit = {
+				leader_age >= 18
+			}
+		remove_trait = leader_trait_snap_protected_youth
+	}
+}

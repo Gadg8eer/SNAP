@@ -1,0 +1,293 @@
+portraits = {
+    comet = { texturefile = "gfx/models/portraits/comet.dds" }
+	suprema = { texturefile = "gfx/models/portraits/suprema.dds" }
+	wisp = { texturefile = "gfx/models/portraits/wisp.dds" }
+	eyes = { texturefile = "gfx/models/portraits/eyes.dds" }
+	eyes2 = { texturefile = "gfx/models/portraits/eyes2.dds" }
+	plant = { texturefile = "gfx/models/portraits/plant.dds" }
+	balance = { texturefile = "gfx/models/portraits/balance.dds" }
+	plaguebug = { texturefile = "gfx/models/portraits/plaguebug.dds" }
+	humanconcept = { texturefile = "gfx/models/portraits/humanconcept.dds" }
+}
+
+    portrait_groups = {
+    comet = { 
+		default = comet
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					comet
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					comet
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					comet
+				}
+			}
+		}
+		
+		# leader = { #scientists, generals, admirals, governor
+		# 	add = {
+		# 		trigger = {
+		# 			leader_class = scientist
+		# 		}
+		# 		portraits = {
+		# 			comet
+		# 		}
+		# 	}
+		# 	add = {
+		# 		trigger = {
+		# 			leader_class = general
+		# 		}
+		# 		portraits = {
+		# 			comet
+		# 		}
+		# 	}  
+		# 	add = {
+		# 		trigger = {
+		# 			leader_class = admiral
+		# 		}
+		# 		portraits = {
+		# 			comet
+		# 		}
+		# 	} 
+		# 	add = {
+		# 		trigger = {
+		# 			leader_class = governor
+		# 		}
+		# 		portraits = {
+		# 			comet
+		# 		}
+		# 	} 
+		# }
+		
+		# ruler = {
+		# 	add = {
+		# 		trigger = { always = yes }
+		# 		portraits = {
+		# 			comet
+		# 		}
+		# 	}
+		# }
+	}
+	suprema = { 
+		default = suprema
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					suprema
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					suprema
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					suprema
+				}
+			}
+		}
+	}
+	wisp = { 
+		default = wisp
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					wisp
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					wisp
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					wisp
+				}
+			}
+		}
+	}
+	eyes = { 
+		default = eyes2
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					eyes2
+					eyes
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					eyes2
+					eyes
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					eyes2
+					eyes
+				}
+			}
+		}
+	}
+	plant = { 
+		default = plant
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					plant
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					plant
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					plant
+				}
+			}
+		}
+	}
+	balance = { 
+		default = balance
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					balance
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					balance
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					balance
+				}
+			}
+		}
+	}
+	plaguebug = { 
+		default = plaguebug
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					plaguebug
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					plaguebug
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					plaguebug
+				}
+			}
+		}
+	}
+	humanconcept = { 
+		default = humanconcept
+		game_setup = { 			
+			add = {
+				trigger = { always = yes }
+				portraits = { 
+					humanconcept
+				}
+			} 
+		}			
+		
+		species = { #generic portrait for a species
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					humanconcept
+				}
+			}
+		}		
+		
+		pop = { #for a specific pop
+			add = {
+				trigger = { always = yes }
+				portraits = {
+					humanconcept
+				}
+			}
+		}
+	}
+}
