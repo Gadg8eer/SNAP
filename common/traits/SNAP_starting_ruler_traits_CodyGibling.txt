@@ -60,6 +60,7 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+#		"leader_trait_SNAP_CodyGibling_Gadg8eer"
 #		"leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
 #		"leader_trait_SNAP_CodyGibling_social_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
@@ -135,7 +136,6 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 	leader_class = { commander scientist official }
 	initial = no
 	randomized = no
-	
 	starting_ruler_trait = yes
 	cost = 0
 }
@@ -146,7 +146,7 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
 		script = trait/icon_mechanical
 		CLASS = scientist
 		ICON = "GFX_trait_mechanical"
-		RARITY = common
+		RARITY = rare
 		COUNCIL = triggered
 		TIER = 2
 	}
@@ -250,7 +250,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 		script = trait/icon_mechanical
 		CLASS = scientist
 		ICON = "GFX_trait_mechanical"
-		RARITY = rare
+		RARITY = very_rare
 		COUNCIL = triggered
 		TIER = 2
 	}
@@ -300,7 +300,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
 		# "leader_trait_SNAP_CodyGibling_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
-		"leader_trait_SNAP_CodyGibling_social_Gadg8eer"
+		# "leader_trait_SNAP_CodyGibling_social_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	initial = yes
@@ -357,13 +357,15 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 
 ### No, I'm fully aware I'm not a god. It's more a joke about how my character vaguely resembles Tet from No Game No Life. C'mon, it's Stellaris, half the point is to be able to choose to be pragmatically immoral.
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
+	is_councilor_trait_for_ruler = yes
+	cost = 0
 	inline_script = {
 		script = trait/icon_mechanical
 		CLASS = leader
 		ICON = "GFX_trait_mechanical"
 		RARITY = always
 		COUNCIL = triggered
-		TIER = none
+		TIER = 1
 	}
 	potential = {
 		NOT = {
@@ -402,13 +404,13 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
-		# "leader_trait_SNAP_CodyGibling_Gadg8eer"
+		"leader_trait_SNAP_CodyGibling_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_social_Gadg8eer"
+		# "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	initial = yes
 	is_councilor_trait_for_ruler = yes
-	is_ruler_trait = yes
 	starting_ruler_trait = yes
 	cost = 0
 	modifier = {
@@ -479,4 +481,10 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		# increased chance to discover rare techs (weighted in tech-script)
 		species_leader_exp_gain = 0.10
 	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+	
+	starting_ruler_trait = yes
+	cost = 0
 }
