@@ -184,6 +184,9 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
 		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+		# "leader_trait_SNAP_CodyGibling_Gadg8eer"
+		#"leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+		"leader_trait_SNAP_CodyGibling_social_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	initial = yes
@@ -291,8 +294,9 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
-		"leader_trait_SNAP_CodyGibling_Gadg8eer"
+		# "leader_trait_SNAP_CodyGibling_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
+		"leader_trait_SNAP_CodyGibling_social_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	initial = yes
@@ -392,7 +396,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		"leader_trait_SNAP_MisterEightySix_ArcoIris_2"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
 		"leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
-		"leader_trait_SNAP_CodyGibling_Gadg8eer"
+		# "leader_trait_SNAP_CodyGibling_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_quick_Gadg8eer"
 		"leader_trait_SNAP_CodyGibling_social_Gadg8eer"
 	}
