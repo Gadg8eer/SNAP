@@ -16,17 +16,18 @@
 #-------------------------------------------------------------------------------------------------------------------------------------------#
 # If you understand and accept the above conditions, you may proceed.
 
-#leader_CodyGibling_Gadg8eer: "Gadg8eer"
- SNAP_CodyGibling_txtfrag8: "§RGadg8eer © 1990-2024 Cody Gibling. All Rights reserved.\n\n§KGadg8eer(TM) as a fictional character is an unregistered trademark of Cody Gibling under Canadian trademark law. Please don't use without permission, you'd be messing with my persona.§T"
- SNAP_CodyGibling_txtfrag10: "Gadgeteer"
- leader_trait_SNAP_CodyGibling_Gadg8eer: "The $SNAP_CodyGibling_txtfrag10$"
- leader_trait_SNAP_CodyGibling_Gadg8eer_desc: "This leader has a shockingly youthful Residual Self-Image, having just achieved self-determination very early in [Root.GetHerHis] life. [Root.GetSheHe] seems promising but with great power often comes great tradeoffs.\n----------\n$SNAP_CodyGibling_txtfrag8$"
- leader_trait_SNAP_CodyGibling_quick_Gadg8eer: "Quick $SNAP_CodyGibling_txtfrag10$"
- leader_trait_SNAP_CodyGibling_quick_Gadg8eer_desc: "This leader has a shockingly youthful Residual Self-Image, having achieved self-determination very early in [Root.GetHerHis] life. [Root.GetHerHis] affinity for machines has only grown with experience and time. Haunted but undaunted by the harshness of mortal existence, [Root.GetSheHe] continues to pursue true immortality for [Root.GetHerHis] people.\n----------\n$SNAP_CodyGibling_txtfrag8$"
- leader_trait_SNAP_CodyGibling_social_Gadg8eer: "Social $SNAP_CodyGibling_txtfrag10$"
- leader_trait_SNAP_CodyGibling_social_Gadg8eer_desc: "This leader has a shockingly youthful Residual Self-Image, having achieved self-determination very early in [Root.GetHerHis] life. [Root.GetHerHis] empathy and political wisdom has allowed [Root.GetHerHim] to remain in power through genuine compassion where cruel despots would have been rooted out long ago, though [Root.GetSheHe] still has blood on [Root.GetHerHis] hands as all heroes and leaders unfortunately do, and [Root.GetHerHis] claims of having obtained some of [Root.GetHerHis] knowledge from \"another world\" seem dubious at best. Though somewhat worn down by the rigors and burdens [Root.GetSheHe] has taken on, [Root.GetSheHe] is still an optimist at heart and still hopes the countless dead sentients who have ever died in a cold, uncaring universe will not remain so... even if reality itself must be recalibrated to allow eternal life.\n----------\n$SNAP_CodyGibling_txtfrag8$"
- leader_trait_SNAP_CodyGibling_playing_Gadg8eer: "Playing $SNAP_CodyGibling_txtfrag10$"
- leader_trait_SNAP_CodyGibling_playing_Gadg8eer_desc: "This leader has a shockingly youthful Residual Self-Image, having achieved self-determination very early in [Root.GetHerHis] life. [Root.GetHerHis] goal of being free from the chains of reality and mortality has been actualized by winning Stellurbis, a game devised by Yan and Ying, the Gods of Play, in the Astral Plane known as the Special Zone. Haunted but undaunted by the harshness of mortal existence, [Root.GetSheHe] continues to pursue the cause of granting true immortality to the rest of [Root.GetHerHis] people.\n----------\n$SNAP_CodyGibling_txtfrag8$"
+#leader_CodyGibling_Gadg8eer:0 "Gadg8eer"
+ SNAP_CodyGibling_txtfrag8:0 "§RGadg8eer © 1990-2024 Cody Gibling. All Rights reserved.\n\n§KGadg8eer(TM) as a fictional character is an unregistered trademark of Cody Gibling under Canadian trademark law. Please don't use without permission, you'd be messing with my persona.§T"
+ SNAP_CodyGibling_txtfrag10:0 "Gadgeteer"
+ leader_trait_SNAP_CodyGibling_Gadg8eer:0 "The $SNAP_CodyGibling_txtfrag10$"
+ leader_trait_SNAP_CodyGibling_Gadg8eer_desc:0 "This leader has a shockingly youthful Residual Self-Image, having just achieved self-determination very early in his life. He seems promising but with great power often comes great tradeoffs.\n----------\n$SNAP_CodyGibling_txtfrag8$"
+ leader_trait_SNAP_CodyGibling_quick_Gadg8eer:0 "Quick $SNAP_CodyGibling_txtfrag10$"
+ leader_trait_SNAP_CodyGibling_quick_Gadg8eer_desc:0 "This leader has a shockingly youthful Residual Self-Image, having achieved self-determination very early in his life. His affinity for machines has only grown with experience and time. Haunted but undaunted by the harshness of mortal existence, 
+ he continues to pursue true immortality for his people.\n----------\n$SNAP_CodyGibling_txtfrag8$"
+ leader_trait_SNAP_CodyGibling_social_Gadg8eer:0 "Social $SNAP_CodyGibling_txtfrag10$"
+ leader_trait_SNAP_CodyGibling_social_Gadg8eer_desc:0 "This leader has a shockingly youthful Residual Self-Image, having achieved self-determination very early in his life. His empathy and political wisdom has allowed him to remain in power through genuine compassion where cruel despots would have been rooted out long ago, though he still has blood on his hands as all heroes and leaders unfortunately do, and his claims of having obtained some of his knowledge from \"another world\" seem dubious at best. Though somewhat worn down by the rigors and burdens he has taken on, he is still an optimist at heart and still hopes the countless dead sentients who have ever died in a cold, uncaring universe will not remain so... even if reality itself must be recalibrated to allow eternal life.\n----------\n$SNAP_CodyGibling_txtfrag8$"
+ leader_trait_SNAP_CodyGibling_playing_Gadg8eer:0 "Playing $SNAP_CodyGibling_txtfrag10$"
+ leader_trait_SNAP_CodyGibling_playing_Gadg8eer_desc:0 "This leader has a shockingly youthful Residual Self-Image, having achieved self-determination very early in his life. His goal of being free from the chains of reality and mortality has been actualized by winning Stellurbis, a game devised by Yan and Ying, the former Gods of Play, in the Astral Plane known as the Special Zone. Haunted but undaunted by the harshness of mortal existence, Gadg8eer continues to pursue the cause of granting true immortality to the rest of his people.\n----------\n$SNAP_CodyGibling_txtfrag8$"
 #commented line because of paradox shenanigans
     
  #---------#
@@ -46,12 +47,12 @@
 #-------------------------------------------------------------------------------------------------------------------------------------------#
 # If you understand and accept the above conditions, you may proceed.
  
-#leader_Steven_Wintle_Jenny_Everywhere: "Jenny Everywhere"
- SNAP_Steven_Wintle_txtfrag0: "Shifter"
- SNAP_Steven_Wintle_licence0: "§YThe character of Jenny Everywhere is available for use by anyone, with only one condition. This paragraph must be included in any publication involving Jenny Everywhere, in order that others may use this property as they wish. All rights reversed.§T"
- SNAP_Steven_Wintle_note0: "§KNote:§G Jenny Everywhere, the Shifter, is an Open Source character created by Steven Wintle but available to everyone as long as the above paragraph is included. That said, her traditional description §Y(seen in the §MResidual Self-Image Portrait included with this mod)§G is almost always used regardless of the canon she appears in.§T Thank you, Steven!"
- leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere: "The $SNAP_Steven_Wintle_txtfrag0$"
- leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_desc: "This leader bears a very run-of-the-mill Residual Self-Image but has an odd, intrinsic connection to some sort of other reality. It is hypothesized that [Root.GetSheHe] may be a multiversal constant of some sort.\n----------\n$SNAP_Steven_Wintle_licence0$\n\n$SNAP_Steven_Wintle_note0$"
- leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2: "$leader_Steven_Wintle_Jenny_Everywhere$"
- leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2_desc: "This leader has an intrinsic connection to [Root.GetHerHis] alternate selves across the multiverse. It is hypothesized that [Root.GetSheHe] may be a multiversal constant of some sort. Whatever the case, [Root.GetSheHe] is a skilled explorer who loves toast.\n----------\n$SNAP_Steven_Wintle_licence0$\n\n$SNAP_Steven_Wintle_note0$"
+#leader_Steven_Wintle_Jenny_Everywhere:0 "Jenny Everywhere"
+ SNAP_Steven_Wintle_txtfrag0:0 "Shifter"
+ SNAP_Steven_Wintle_licence0:0 "§YThe character of Jenny Everywhere is available for use by anyone, with only one condition. This paragraph must be included in any publication involving Jenny Everywhere, in order that others may use this property as they wish. All rights reversed.§T"
+ SNAP_Steven_Wintle_note0:0 "§KNote:§G Jenny Everywhere, the Shifter, is an Open Source character created by Steven Wintle but available to everyone as long as the above paragraph is included. That said, her traditional description §Y(seen in the §MResidual Self-Image Portrait included with this mod)§G is almost always used regardless of the canon she appears in.§T Thank you, Steven!"
+ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere:0 "The $SNAP_Steven_Wintle_txtfrag0$"
+ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_desc:0 "This leader bears a very run-of-the-mill Residual Self-Image but has an odd, intrinsic connection to some sort of other reality. It is hypothesized that she may be a multiversal constant of some sort.\n----------\n$SNAP_Steven_Wintle_licence0$\n\n$SNAP_Steven_Wintle_note0$"
+ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2:0 "$leader_Steven_Wintle_Jenny_Everywhere$"
+ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2_desc:0 "This leader has an intrinsic connection to her alternate selves across the multiverse. It is hypothesized that she may be a multiversal constant of some sort. Whatever the case, she is a skilled explorer who loves toast.\n----------\n$SNAP_Steven_Wintle_licence0$\n\n$SNAP_Steven_Wintle_note0$"
 #commented line because of paradox shenanigans
