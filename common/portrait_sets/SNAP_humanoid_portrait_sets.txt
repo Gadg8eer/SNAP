@@ -83,7 +83,13 @@ virtual_humanoids = {
                     species_gender = indeterminable
                     species_gender = not_set
                     // 
-                    has_tradition = 
+                    potential = {
+						OR = {
+							has_tradition = tradition_virtual
+							has_tradition = tradition_synthetic
+							has_tradition = tradition_psionic_ascension
+						}
+					}
                 }
             }
         }

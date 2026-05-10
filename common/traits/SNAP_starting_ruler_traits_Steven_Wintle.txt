@@ -14,11 +14,11 @@
 leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere = {
 	cost = 1
 	inline_script = {
-		script = "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere"
+		script = trait/icon_clone_soldier
 		CLASS = leader
 		ICON = "GFX_trait_clone_soldier"
 		RARITY = always
-		COUNCIL = yes
+		COUNCIL = triggered
 		TIER = 1
 	}
 	leader_potential_add {
@@ -87,7 +87,7 @@ leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2 = {
 	replace_traits = { "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere" }
 	cost = 1
 	inline_script = {
-		script = "leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2"
+		script = trait/icon_clone_soldier
 		CLASS = scientist
 		ICON = "GFX_trait_ingenious"
 		RARITY = unique
