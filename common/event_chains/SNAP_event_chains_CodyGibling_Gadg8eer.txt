@@ -12,26 +12,8 @@
 # If you understand and accept the above conditions, you may proceed.
 
 on_leader_death = {
-	if = {
-		limit = {
-			who = {
-				event_target_SNAP_CodyGibling_Gadg8eer = {
-					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
-				}
-			}
-		}
-		immediate = {
-			who = {
-				event_target_SNAP_CodyGibling_Gadg8eer = {
-					kill_leader = {
-						show_notification = no
-						fire = no
-					}
-				}
-			 }
-			set_global_flag = SNAP_CodyGibling_Gadg8eer_is_dead
-		}
-	}
+	set_global_flag = SNAP_defeatflag_CodyGibling_Gadg8eer
+	events = { SNAP_events_CodyGibling_Gadg8eer.4 }
 }
 on_ruler_removed = {
 	pre_triggers = {
