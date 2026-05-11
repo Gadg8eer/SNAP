@@ -10,7 +10,6 @@ event = {
 		limit = {
 			is_ai = no # Only human players
 		}
-		SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
 		every_country = {
 			limit = {
 				NOT = {
@@ -22,11 +21,12 @@ event = {
 							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
 				}
 			}
 			set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+			set_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+			save_event_target_as = SNAP_CodyGibling_Gadg8eer
 			if = {
 				limit = {
 					NOT = {
@@ -34,19 +34,16 @@ event = {
 					}
 					exists = ruler
 					ruler = {
-						NAND = {
-							OR = {
-								has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-								has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-								has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-							}
-							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
 						}
 					}
 				}
 				set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 				ruler = {
-					set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+					set_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 					# Force age to 8 until a later date
 					set_age = 8
 					# Optionally check if the name is not what you want
@@ -63,48 +60,11 @@ event = {
 						}
 					}
 				}
-			}
 			fire_event = {
 				id = SNAP_events_CodyGibling_Gadg8eer.1
 				days = 1
 			}
-		} else_if = {
-			limit = {
-				has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
-			}
-			immediate = {
-				ruler = {
-					set_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
-					# Force age to 8 until a later date
-					set_age = 8
-					# Optionally check if the name is not what you want
-					if = {
-						limit = {
-							NOT = {
-								check_variable = {
-									which = name value = "Gadg8eer"
-								}
-							}
-						}
-						set_name = {
-							name = "leader_CodyGibling_Gadg8eer"
-						}
-					}
-				}
-				fire_event = {
-					id = SNAP_events_CodyGibling_Gadg8eer.9
-					days = 609
-				}
-			}
 		}
-	}
-	limit = {
-		is_ai = no # Only human players
-	}
-	SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = yes
-	fire_event = {
-		id = SNAP_events_CodyGibling_Gadg8eer.1
-		days = 1
 	}
 }
 
@@ -125,7 +85,7 @@ event = {
 			limit = {
 				exists = ruler
 				ruler = {
-					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 					NOT = {
 						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
@@ -171,7 +131,7 @@ event = {
 			limit = {
 				exists = ruler
 				ruler = {
-					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 				}
 			}
 			ruler = {
@@ -216,7 +176,7 @@ event = {
 			limit = {
 				exists = ruler
 				ruler = {
-					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 				}
 			}
 			ruler = {
@@ -255,15 +215,7 @@ event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		ruler = {
-			AND = {
-				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
-				leader_age = 85
-				is_immortal = no
-				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-				is_ai = no # Only human players
-			}
-		}
+		has_leader_flag = SNAP_CodyGibling_Gadg8eer
 	}
 	
 	immediate = {
@@ -271,10 +223,15 @@ event = {
 			limit = {
 				exists = ruler
 				ruler = {
-					has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
-					AND = {
-						leader_age = 85
-						is_immortal = no
+					has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
+					OR = {
+						AND = {
+							has_global_flag = SNAP_defeatflag_CodyGibling_Gadg8eer
+							is_immortal = no
+						}
+						AND = {
+							leader_age > 85
+							is_immortal = no
 						}
 					}
 				}
@@ -298,14 +255,14 @@ event = {
 			limit = {
 				exists = ruler
 				who = {
-					event_target_SNAP_CodyGibling_Gadg8eer = {
+					leader_is_SNAP_CodyGibling_Gadg8eer = {
 						leader_age = 85
 						is_immortal = no
 					}
 				}
 			}
 			who = {
-				event_target_SNAP_CodyGibling_Gadg8eer = {
+				leader_is_SNAP_CodyGibling_Gadg8eer = {
 					kill_leader = {
 						show_notification = no
 						fire = no
@@ -331,7 +288,7 @@ event = {
 		} else_if = {
 			limit = {
 				who = {
-					event_target_SNAP_CodyGibling_Gadg8eer = {
+					leader_is_SNAP_CodyGibling_Gadg8eer = {
 						has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 						OR = {
 							AND = {
@@ -358,7 +315,7 @@ event = {
 			}
 			immediate = {
 				who = {
-					event_target_SNAP_CodyGibling_Gadg8eer = {
+					leader_is_SNAP_CodyGibling_Gadg8eer = {
 						set_immortal = no
 					}
 				}
@@ -367,56 +324,24 @@ event = {
 	}
 }
 
-# August 9th, year 2
-event = {
-	id = SNAP_events_CodyGibling_Gadg8eer.9
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		limit = {
-			AND = {
-			has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-				is_ai = no # Only human players
-				NOT = {
-					has_global_flag = global_SNAP_rulerprep_CodyGibling_Gadg8eer
-				}
-			}
-		}
-		set_global_flag = global_SNAP_rulerprep_CodyGibling_Gadg8eer
-	}
-}
 
+# Playing Gadg8eer
+# You go too far! Must not defy nature!
+# No! Me am keep warm!
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.10
 	hide_window = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 
 	immediate = {
-		limit = {
+		event_target:SNAP_CodyGibling_Gadg8eer = {
 			AND = {
-				has_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
-				is_ai = no # Only human players
-				has_global_flag = global_SNAP_rulerprep_CodyGibling_Gadg8eer
-			}
-		}
-		every_country = {
-			limit = {
-				exists = ruler
-				ruler = {
-				who = {
-						event_target_SNAP_CodyGibling_Gadg8eer = {
-							AND = {
-								has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
-								NOT = {
-									leader_age = 10
-								}
-								NOT = {
-									is_immortal = yes
-								}
-							}
-						}
-					}
+				has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+				NOT = {
+					leader_age = 10
+				}
+				NOT = {
+					is_immortal = yes
 				}
 			}
 			ruler = {
@@ -425,7 +350,7 @@ event = {
 					limit = {
 						AND = {
 							has_global_flag = global_SNAP_rulerprep_CodyGibling_Gadg8eer
-							has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
+							has_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 						}
 					}
