@@ -57,19 +57,11 @@ event = {
 							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-						}
-					}
-				}
-				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
-			} else_if = {
-				limit = {
-					any_owned_leader = {
-						OR = {
 							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 						}
 					}
 				}
-				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.10 }
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
 			}
 		}
 		
