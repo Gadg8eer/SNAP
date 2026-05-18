@@ -9,12 +9,28 @@ event = {
 		# Unless otherwise specified by the creator, personas/characters who are minors will not die.
 		if = {
 			limit = {
-				AND = {
-					leader_age < 18
-					OR = {
-						has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
-						has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+				OR = {
+					AND = {
+						leader_age < 18
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
+							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
+					}
+					AND = {
+						leader_age < 18
+						OR = {
+							has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere
+							has_trait = leader_trait_SNAP_Steven_Wintle_Jenny_Everywhere_2
+						}
+					}
+					AND = {
+						leader_age < 18
+						OR = {
+							has_trait = leader_trait_SNAP_MisterEightySix_ArcoIris
+						}
+					}
+					AND = {
 						has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					}
 				}
@@ -57,11 +73,19 @@ event = {
 							has_trait = leader_trait_SNAP_CodyGibling_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_quick_Gadg8eer
 							has_trait = leader_trait_SNAP_CodyGibling_social_Gadg8eer
-							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 						}
 					}
 				}
 				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.0 }
+			} else_if = {
+				limit = {
+					any_owned_leader = {
+						OR = {
+							has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+						}
+					}
+				}
+				fire_event = { id = SNAP_events_CodyGibling_Gadg8eer.10 }
 			}
 		}
 		

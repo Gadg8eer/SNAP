@@ -93,9 +93,8 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 	}
 	on_age_change = {
 		# Reset age to 10 on any age change
-		if = {
+		SNAP_CodyGibling_Gadg8eer = {
 			limit = {
-				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				AND = {
 					OR = {
 						is_robotic = yes
@@ -106,13 +105,13 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 						age = 10
 					}
 				}
+				# Force custom portrait
+				set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
+				# Force age to 10 (Done via event to allow a progression of birthdays)
+				# set_age = 10
+				# Affirm immortality
+				immortal_leaders = yes
 			}
-			# Force custom portrait
-			set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
-			# Force age to 10 (Done via event to allow a progression of birthdays)
-			# set_age = 10
-			# Affirm immortality
-			immortal_leaders = yes
 		}
 	}
 	### Tooltip
@@ -202,7 +201,7 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
 	}
 	on_add = {
 		# If virtual, conceptual or robotic, force age to 10 if not already
-		if = {
+		SNAP_CodyGibling_Gadg8eer = {
 			limit = {
 				OR = {
 					is_robotic = yes
@@ -223,7 +222,7 @@ leader_trait_SNAP_CodyGibling_quick_Gadg8eer = {
 	}
 	on_age_change = {
 		# Reset age to 10 on any age change
-		if = {
+		SNAP_CodyGibling_Gadg8eer = {
 			limit = {
 				OR = {
 					is_robotic = yes
@@ -333,9 +332,8 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 	}
 	on_age_change = {
 		# Reset age to 10 on any age change
-		if = {
+		SNAP_CodyGibling_Gadg8eer = {
 			limit = {
-				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				OR = {
 					is_robotic = yes
 					has_trait = trait_virtual
@@ -358,7 +356,7 @@ leader_trait_SNAP_CodyGibling_social_Gadg8eer = {
 ### No, I'm fully aware I'm not a god. It's more a joke about how my character vaguely resembles Tet from No Game No Life. C'mon, it's Stellaris, half the point is to be able to choose to be pragmatically immoral.
 leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 	is_councilor_trait_for_ruler = yes
-	cost = 0
+	cost = 2
 	inline_script = {
 		script = trait/icon_mechanical
 		CLASS = leader
@@ -410,9 +408,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		# "leader_trait_SNAP_CodyGibling_playing_Gadg8eer"
 	}
 	initial = yes
-	is_councilor_trait_for_ruler = yes
 	starting_ruler_trait = yes
-	cost = 0
 	modifier = {
 		physics_research_speed = 0.25
 		society_research_speed = 0.25
@@ -422,34 +418,28 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 		# If virtual, conceptual or robotic, force age to 10 if not already
 		if = {
 			limit = {
-				OR = {
-					is_robotic = yes
-					has_trait = trait_virtual
-					has_trait = trait_conceptoid
-				}
 				NOT = {
+					is_robotic = yes
 					age = 10
 				}
+				has_leader_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 			}
+			event_target:Gadg8eer = {
 			# Force custom portrait
-			set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
+				set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
 			# Force age to 10
-			set_age = 10
+				set_age = 10
 			# Affirm immortality
-			immortal_leaders = yes
+				immortal_leaders = yes
+			}
 		}
 	}
 	on_age_change = {
 		# Reset age to 10 on any age change
-		if = {
+		SNAP_CodyGibling_Gadg8eer = {
 			limit = {
-				has_leader_flag = event_target_SNAP_CodyGibling_Gadg8eer
 				AND = {
-					OR = {
-						is_robotic = yes
-						has_trait = trait_virtual
-						has_trait = trait_conceptoid
-					}
+					has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 					NOT = {
 						age = 10
 					}
