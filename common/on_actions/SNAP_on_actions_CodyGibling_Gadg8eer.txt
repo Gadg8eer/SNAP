@@ -15,13 +15,14 @@
 on_game_start = {
 	events = {
 		SNAP_events_CodyGibling_Gadg8eer.0
+		SNAP_events_CodyGibling_Gadg8eer.10
 	}
 }
 
 on_daily_pulse = {
 	events = {
 		SNAP_events_CodyGibling_Gadg8eer.4 # The one that has to earn immortality.
-		SNAP_events_CodyGibling_Gadg8eer.10 # The one who... tries to repay his people for granting him immortality? plz don't hate me! ¡_¡
+		SNAP_events_CodyGibling_Gadg8eer.11 # The one who... tries to repay his people for granting him immortality? plz don't hate me! ¡_¡
 	}
 }
 
