@@ -230,14 +230,14 @@ event = {
 							is_immortal = no
 						}
 						AND = {
-							leader_age > 85
+							leader_age >= 85
 							is_immortal = no
 						}
 					}
 				}
 			}
 			fire_event = {
-				id = SNAP_events_CodyGibling_Gadg8eer.5
+				id = snap_CodyGibling_Gadg8eer.4
 				days = 359
 			}
 		}
@@ -334,14 +334,47 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
+		create_leader = {
+			class = scientist
+			species = root.species
+			name = leader_CodyGibling_Gadg8eer
+			gender = male
+			# Force custom portrait
+			set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
+			# Force age to 10
+			set_age = 10
+			skill = 3
+			traits = {
+				trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+				trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+			}
+			owner = root
+			save_event_target_as = SNAP_CodyGibling_Gadg8eer
+		}
+
+		event_target:SNAP_CodyGibling_Gadg8eer = {
+			set_immortal = yes
+			set_ruler = yes
+		}
+	}
+}
+
+event = {
+	id = SNAP_events_CodyGibling_Gadg8eer.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
 		event_target:SNAP_CodyGibling_Gadg8eer = {
 			AND = {
 				has_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
-				NOT = {
-					leader_age = 10
-				}
-				NOT = {
-					is_immortal = yes
+				OR = {
+					NOT = {
+						leader_age = 10
+					}
+					NOT = {
+						is_immortal = yes
+					}
 				}
 			}
 			ruler = {
@@ -372,4 +405,3 @@ event = {
 			}
 		}
 	}
-}
