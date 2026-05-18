@@ -12,7 +12,7 @@
 # If you understand and accept the above conditions, you may proceed.
 
 ### Start with Gadg8eer
-SNAP_scripted_effect_CodyGibling_Gadg8eer_start = {
+SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0 = {
     pre_triggers = {
         has_owner = yes                # whether the leader exists and is alive
         is_idle = yes                # whether the leader is idle
@@ -32,11 +32,20 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_start = {
                 set_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
                 set_pop_flag = pop_contains_SNAP_CodyGibling_Gadg8eer
                 change_leader_portrait = SNAP_CodyGibling_Gadg8eer  # Add the portrait name
-				save_global_event_target_as = SNAP_CodyGibling_Gadg8eer
             }
         }
         # Set flag because THERE CAN BE ONLY ONE!
         set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+    }
+}
+
+SNAP_scripted_effect_CodyGibling_Gadg8eer_start_1 = {
+    immediate = {
+        owner = {
+            ruler = {
+                save_global_event_target_as = event_target:Gadg8eer
+            }
+        }
     }
 }
 
@@ -68,7 +77,7 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_oops_noremove = {
 
 ### If Gadg8eer becomes 86 years old or is forcibly removed from the position of ruler, he dies.
 ### Also includes compatibility with Constructorvette Mod.
-SNAP_scripted_effect_codygibling_death_of_an_inner_child = {
+SNAP_scripted_effect_codygibling_death_of_an_inner_child_0 = {
     event = {
 
     }
