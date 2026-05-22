@@ -91,29 +91,6 @@ leader_trait_SNAP_CodyGibling_Gadg8eer = {
 			immortal_leaders = yes
 		}
 	}
-	on_age_change = {
-		# Reset age to 10 on any age change
-		SNAP_CodyGibling_Gadg8eer = {
-			limit = {
-				AND = {
-					OR = {
-						is_robotic = yes
-						has_trait = trait_virtual
-						has_trait = trait_conceptoid
-					}
-					NOT = {
-						age = 10
-					}
-				}
-				# Force custom portrait
-				set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
-				# Force age to 10 (Done via event to allow a progression of birthdays)
-				# set_age = 10
-				# Affirm immortality
-				immortal_leaders = yes
-			}
-		}
-	}
 	### Tooltip
 	triggered_self_modifier = {
 		# has potential only when NOT on council
@@ -424,7 +401,7 @@ leader_trait_SNAP_CodyGibling_playing_Gadg8eer = {
 				}
 				has_leader_trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
 			}
-			event_target:Gadg8eer = {
+			SNAP_CodyGibling_Gadg8eer = {
 			# Force custom portrait
 				set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
 			# Force age to 10
