@@ -49,7 +49,7 @@ global_event = {
                     }
                     effect = { # SNAP_scripted_effects
                         set_global_flag = SNAP_scripted_effect_CodyGibling_Gadg8eer_start_0
-                    #    set_leader_flag = CodyGibling_Gadg8eer
+                    #    set_leader_flag = SNAP_CodyGibling_Gadg8eer
                     }
                 }
             }
