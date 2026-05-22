@@ -13,29 +13,58 @@
 
 ### Start with Gadg8eer
 SNAP_scripted_effect_CodyGibling_Gadg8eer_start = {
-	pre_triggers = {
-		has_owner = yes				# whether the leader exists and is alive
-		is_idle = yes				# whether the leader is idle
-	}
-	trigger = {
-		has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer # Check if the leader actually *has* the trait
-	}
+	has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer # Check if the leader actually *has* the trait
 	immediate = {
-		owner = {
-			ruler = {
-				set_name = leader_CodyGibling_Gadg8eer
-				leader_age_min = 10
-				set_age = 10
-				leader_age_max = 87
-				set_gender = male
-				hide_age = no
-				set_leader_flag = leader_is_SNAP_CodyGibling_Gadg8eer
-				set_pop_flag = pop_contains_SNAP_CodyGibling_Gadg8eer
-				change_leader_portrait = SNAP_CodyGibling_Gadg8eer  # Add the portrait name
-				save_global_event_target_as = SNAP_CodyGibling_Gadg8eer
+		create_leader = {
+			class = scientist
+			species = root.species
+			name = leader_CodyGibling_Gadg8eer
+			gender = male
+			skill = 3
+			traits = {
+				trait = leader_trait_SNAP_CodyGibling_Gadg8eer
 			}
+			owner = root
+			save_event_target_as = SNAP_CodyGibling_Gadg8eer
 		}
-		# Set flag because THERE CAN BE ONLY ONE!
+
+		event_target:SNAP_CodyGibling_Gadg8eer = {
+			set_age = 8
+			set_ruler = yes
+		}
+	
+	# Set flag because THERE CAN BE ONLY ONE!
+		set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
+	}
+}
+
+
+### Start with (personalized, kinda cheat-y) Gadg8eer
+SNAP_scripted_effect_CodyGibling_playing_Gadg8eer_start = {
+	has_trait = trait_ruler_SNAP_CodyGibling_playing_Gadg8eer # Check if the leader actually *has* the trait
+	immediate = {
+		create_leader = {
+			class = scientist
+			species = root.species
+			name = leader_CodyGibling_Gadg8eer
+			gender = male
+			skill = 3
+			traits = {
+				trait = leader_trait_SNAP_CodyGibling_playing_Gadg8eer
+				trait = trait_mechanical
+			}
+			owner = root
+			save_event_target_as = SNAP_CodyGibling_Gadg8eer
+		}
+
+		event_target:SNAP_CodyGibling_Gadg8eer = {
+			set_portrait = "SNAP_portraits_CodyGibling_Gadg8eer"
+			set_age = 10
+			set_immortal = yes
+			set_ruler = yes
+		}
+		
+	# Set flag because THERE CAN BE ONLY ONE!
 		set_global_flag = global_SNAP_rulerclaim_CodyGibling_Gadg8eer
 	}
 }
@@ -48,18 +77,23 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_oops_noremove = {
 		is_idle = yes		# whether the leader is idle
 	}
 	trigger = {
-		has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer # Check if the leader actually *has* the trait
+		OR = {
+			has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer # Check if the leader actually *has* the trait
+			is_same_value = {
+				first = root
+				second = event_target:SNAP_CodyGibling_Gadg8eer
+			}
+		}
 	}
 	immediate = {
-		event_target:Gadg8eer = { #removed unnecessary who = {}
-			if = { #Check if ruler before attempting assignement
+		SNAP_CodyGibling_Gadg8eer = { #Check if ruler before attempting assignement
 				limit = {
 					is_valid_leader_for_position = ruler
 				}
 				assign_leader = ruler
 				set_leader_flag = prevent_remove_SNAP_CodyGibling_Gadg8eer
 				leader_event = {
-					id = stellaris.novelty.avatar.portraits_codygibling.3
+					id = SNAP_events_CodyGibling_Gadg8eer.3
 				}
 			}
 		}
@@ -70,6 +104,21 @@ SNAP_scripted_effect_CodyGibling_Gadg8eer_oops_noremove = {
 ### Also includes compatibility with Constructorvette Mod.
 SNAP_scripted_effect_codygibling_death_of_an_inner_child = {
 	event = {
-
+	#Consider changing this to an on_action trigger if possible for more reliability
+		pre_triggers = {
+			has_owner = yes		# whether the leader exists and is alive
+			is_idle = yes		# whether the leader is idle
+		}
+	trigger = {
+		AND = {
+			OR = {
+				has_trait = trait_ruler_SNAP_CodyGibling_Gadg8eer # Check if the leader actually *has* the trait
+				is_same_value = {
+					first = root
+					second = event_target:SNAP_CodyGibling_Gadg8eer
+				}
+			}
+			age = 86
+		}
 	}
-
+}
