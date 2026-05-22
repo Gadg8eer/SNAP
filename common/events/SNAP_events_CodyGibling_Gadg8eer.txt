@@ -1,6 +1,6 @@
 namespace = SNAP_events_CodyGibling_Gadg8eer
 
-# January 2nd, game start year
+# January 3rd, game start year
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.0
 	hide_window = yes
@@ -41,7 +41,7 @@ event = {
 	}
 }
 
-# January 3rd, game start year
+# January 4th, game start year
 event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.1
 	hide_window = yes
@@ -66,7 +66,7 @@ event = {
 			}
 			fire_event = {
 			id = SNAP_events_CodyGibling_Gadg8eer.2
-			days = 247
+			days = 245
 			}
 		}
 	}
@@ -159,6 +159,8 @@ event = {
 	id = SNAP_events_CodyGibling_Gadg8eer.10
 	hide_window = yes
 	is_triggered_only = yes
+	
+	trigger = SNAP_startup_trigger_CodyGibling_playing_Gadg8eer
 
 	immediate = {
 		create_leader = {
