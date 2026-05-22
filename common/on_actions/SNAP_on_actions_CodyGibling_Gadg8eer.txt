@@ -14,20 +14,61 @@
 ### At the beginning of play, save the character (Gadg8eer) as an event target, and give global flags to prevent other players from using the same character.
 on_game_start = {
 	events = {
-		SNAP_events_CodyGibling_Gadg8eer.0
-		SNAP_events_CodyGibling_Gadg8eer.10
+		SNAP_events_CheckOntology.0
 	}
 }
 
 on_daily_pulse = {
 	events = {
 		SNAP_events_CodyGibling_Gadg8eer.4 # The one that has to earn immortality.
-		SNAP_events_CodyGibling_Gadg8eer.11 # The one who... tries to repay his people for granting him immortality? plz don't hate me! ¡_¡
 	}
 }
 
+#check for multiplayer
 on_ruler_death = {
 	events = {
-		SNAP_events_CodyGibling_Gadg8eer.5 # 86'd?
+		SNAP_CodyGibling_Gadg8eer.5 # 86'd?
+	}
+}
+
+on_age_change = {
+# Reset age to 10 on any age change
+	events = {
+		SNAP_CodyGibling_Gadg8eer.3 # Cupcake is reward. Very creamy.
+		SNAP_CodyGibling_Gadg8eer.10 # ^_^;
+	}
+}
+
+on_ruler_removed = {
+	pre_triggers = {
+		has_owner = yes				# whether the leader exists and is alive
+	}
+	limit = {
+		event_target:SNAP_CodyGibling_Gadg8eer = {
+			SNAP_CodyGibling_Gadg8eer_is_deadbutessential = yes
+		}
+	}
+	immediate = {
+		event_target:SNAP_CodyGibling_Gadg8eer = {
+			kill_leader = {
+				show_notification = no
+				fire = no
+			}
+		}
+	}
+	if {
+		limit = {
+			is_multiplayer = yes
+		}
+#		owner = {
+#			country = {
+#				destroy_country = yes #If player tries to forcibly remove Gadg8eer, it will "allow" it but triggers an event. Choosing to proceed removed that player from the game.
+#			}
+#		}
+	} else {
+		limit = {
+			is_multiplayer = no
+		}
+		end_game = yes
 	}
 }
